@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Bitcount+Prop+Single:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+:root {
+    --main-bg-color: rgb(135, 73, 32);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    background-color: var(--main-bg-color);
+    height: 10vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 140px;
+    padding: 0 25px;
+}
+
+#home{
+    font-weight: bold;
+    border-bottom: 3px solid white;
+    padding: 7px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    height: 58px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 25px;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+
+nav ul li a {
+    color: white;
+    height: 30px;
+    width: 30px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    font-weight: bolder;
+}
+
+.downloadbutton {
+    position: relative;
+    
+}
+
+.connecting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 43vw;
+}
+
+.container {
+    min-height: calc(100vh - 10vh - 10vh);
+}
+
+
+#download-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 12px;
+    height: 40px;
+    width: 135px;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+
+#download-button:hover {
+    border: 4px solid white;
+}
+
+
+main {
+    background-image: url("../images/background3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.lines {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    top: 8vh;
+    left: 5vw;
+}
+
+.lines h2 {
+    font-family: "Bitcount Prop Single", system-ui;
+    color: var(--main-bg-color);
+    font-size: 60px;
+    position: relative;
+    top: 10px;
+    bottom: 10px;
+}
+
+
+#typing {
+    color: var(--main-bg-color);
+    border-right: 3px solid var(--main-bg-color);
+    white-space: nowrap ;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.lines h1 {
+    position: relative;
+    top: 10px;
+    font-size: 70px;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+
+.lines h3 {
+    position: relative;
+    top: 20px;
+    font: 50px;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+
+.myimage {
+    display: flex;
+}
+
+.myimage img {
+    position: absolute;
+    right: 50px;
+    bottom: 85px;
+    height: 500px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    width: auto;
+    margin-left: 60px;
+    position: relative;
+    top: 50px;
+    gap: 70px;
+
+}
+
+.contacts a {
+    font-size: 50px;
+    color: var(--main-bg-color);
+}
+
+
+footer {
+    display: flex;
+    background-color: var(--main-bg-color);
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+footer p {
+    color: white;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+
+    header {
+        display: flex;
+        align-items: center;
+        height: 10vh;
+        width: 100vw;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        height: 0;
+        width: 0;
+    }
+
+    nav ul {
+        display: flex;
+        width: 100vw;
+    }
+
+    nav ul li {
+        width: 30px;
+        height: 20px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+
+    #home {
+        padding: 0px;
+    }
+
+    .headings{
+        flex-direction: column;
+        width: 7vw;
+        padding-bottom: 50px;
+        padding-top: 10px;
+    }
+
+    .downloadbutton{
+        position: relative;
+        top: 20px;
+        left: 50px;
+    }
+
+    #download-button{
+        height: 3vh;
+        width: 35vw;
+    }
+
+   main{
+    background-image: url("../images/ChatGPT\ Image\ Jul\ 2\,\ 2026\,\ 04_12_04\ PM.png");
+    background-size: cover;
+    background-position: bottom ;
+   }
+
+    .container {
+        min-height: calc(140vh - 8vh - 10vh);
+    }
+
+    .lines{
+        width: 90vw;
+    }
+
+    .lines h2{
+        font-size: 4vh;
+    }
+
+    .lines h1{
+        font-size: 6vh;
+    }
+
+    .lines h3{
+        font-size: 2vh;
+    }
+
+    .contacts{
+        margin-left: 0px;
+        padding-left: 30px;
+        padding-top: 60vh;
+    }
+    
+
+
+
+
+
+}

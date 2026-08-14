@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Bitcount+Prop+Single:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@keyframes itemanimations {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 50vh;
+    }
+}
+
+
+
+:root {
+    --main-bg-color: rgb(135, 73, 32);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    background-color: var(--main-bg-color);
+    height: 10vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 140px;
+    padding: 0 25px;
+}
+
+#projects {
+    font-weight: bold;
+    border-bottom: 3px solid white;
+    padding: 7px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    height: 58px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 25px;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+
+nav ul li a {
+    color: white;
+    height: 30px;
+    width: 30px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    font-weight: bolder;
+}
+
+.downloadbutton {
+    position: relative;
+    left: 850px;
+}
+
+main {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 10vh - 10vh);
+    padding-left: 70px;
+}
+
+.text {
+    padding-top: 40px;
+    width: 20vw;
+}
+
+.text h1 {
+    font-family: "Bitcount Prop Single", system-ui;
+    color: var(--main-bg-color);
+    font-size: 40px;
+}
+
+.text hr {
+    color: var(--main-bg-color);
+    width: 8vw;
+}
+
+.text h3 {
+    padding-top: 20px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 4vw;
+
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 20vw;
+    background-color: #E5D0C0;
+    border: 2px solid black;
+    border-style: outset;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    /* animation-name: itemanimations;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s; */
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.35) 0%,
+            transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    pointer-events: none;
+}
+
+.item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.item:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.image {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    align-items: center;
+}
+
+.item img {
+    height: 18vh;
+    width: 18vw;
+    border-radius: 10px;
+}
+
+
+.item h3 {
+    font-family: "Bitcount Prop Single", system-ui;
+    color: var(--main-bg-color);
+    padding-left: 10px;
+}
+
+.item h4 {
+    font-family: "Bitcount Prop Single", system-ui;
+    font-weight: 600;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.content {
+    display: flex;
+    padding-left: 10px;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    padding-top: 10px;
+}
+
+.grid1 div {
+    border: 2px solid black;
+    border-radius: 8px;
+    border-style: outset;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.last {
+    display: flex;
+    gap: 8vw;
+    padding-top: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.last a {
+    text-decoration: none;
+    color: var(--main-bg-color);
+    font-weight: 700;
+}
+
+.last a i {
+    padding-left: 10px;
+}
+
+
+footer {
+    display: flex;
+    background-color: var(--main-bg-color);
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+footer p {
+    color: white;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+    header {
+        display: flex;
+        align-items: center;
+        height: 8vh;
+        width: 100vw;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        height: 0;
+        width: 0;
+    }
+
+    nav ul {
+        display: flex;
+        width: 100vw;
+    }
+
+    nav ul li {
+        width: 30px;
+        height: 20px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+
+    #projects {
+        padding: 0px;
+    }
+
+
+    .container {
+        padding-left: 20px;
+        min-height: calc(205vh - 8vh - 10vh);
+    }
+
+    .text {
+        width: 80vw;
+    }
+
+    .text h1 {
+        font-size: 30px;
+    }
+
+    .text hr{
+        width: 30vw;
+    }
+
+    .text h3 {
+        font-size: 15px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 5vh;
+    }
+
+    .item{
+        width: 90vw;
+    }
+
+    .image img{
+        width: 80vw;
+        padding-bottom: 20px;
+    }
+
+    .gridtext{
+        padding-left: 10px;
+    }
+
+    .gridtext h3{
+        font-size: 21px;
+    }
+
+    .gridtext h4{
+        padding-top: 10px;    
+    }
+    
+    .grid1{
+        padding-top: 20px;
+    }
+
+    .last{
+        gap: 38vw;
+    }
+}

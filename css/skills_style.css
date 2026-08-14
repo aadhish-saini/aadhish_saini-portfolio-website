@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Bitcount+Prop+Single:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+:root {
+    --main-bg-color: rgb(135, 73, 32);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    background-color: var(--main-bg-color);
+    height: 10vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 140px;
+    padding: 0 25px;
+}
+
+#skills {
+    font-weight: bold;
+    border-bottom: 3px solid white;
+    padding: 7px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    height: 58px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 25px;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+
+nav ul li a {
+    color: white;
+    height: 30px;
+    width: 30px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    font-weight: bolder;
+}
+
+
+main {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 10vh - 10vh);
+    padding-left: 40px;
+}
+
+.text{
+    padding-top: 40px;
+    width: 20vw;
+}
+
+.text h1{
+    font-family: "Bitcount Prop Single", system-ui;
+    color: var(--main-bg-color);
+    font-size: 40px;
+}
+
+.text hr{
+    color: var(--main-bg-color);
+    width: 60px;
+}
+
+.text h3{
+    padding-top: 20px;
+}
+
+
+.grids{
+    display: flex;
+    padding-top: 30px;
+}
+
+.titles{
+    display: grid;
+    height: 10vh;
+    width: 12vw;
+    grid-gap: 7vh;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 6vh;
+    border: 2px solid var(--main-bg-color);
+    border-radius: 5px;
+}
+
+.item div {
+    padding-left: 10px;
+}
+
+.values{
+    display: flex;
+    padding-left: 70px;
+    width: 50vw;
+}
+
+.seperator{
+    display: flex;
+    flex-direction: column;
+}
+
+.value{
+    display: grid;
+    height: 10vh;
+    width: 50vw;
+    grid-gap: 7vh;
+    grid-template-columns: auto auto auto auto auto ;
+    padding-bottom: 25px;
+}
+
+.skill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5D0C0;
+    height: 6vh;
+    width: 12vw;
+    border: 2px solid var(--main-bg-color);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.skill:hover{
+    transform: translateY(-5px);
+    border-color: #9C5B2E;
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+.skill div{
+    padding-left: 20px;
+}
+
+
+footer {
+    display: flex;
+    background-color: var(--main-bg-color);
+    justify-content: center;
+    align-items: center;
+    height: 8.4vh;
+}
+
+footer p {
+    color: white;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+
+    header {
+        display: flex;
+        align-items: center;
+        height: 8vh;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        height: 0;
+        width: 0;
+    }
+
+    nav ul {
+        display: flex;
+        width: 100vw;
+    }
+
+    nav ul li {
+        width: 30px;
+        height: 20px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+
+    #skills {
+        padding: 0px;
+    }
+
+
+    .container {
+        padding-left: 10px;
+        min-height: calc(175vh - 8vh - 10vh);
+        flex-direction: column;
+    }
+
+    .text{
+        width: 80vw;
+    }
+
+    .titles{
+        gap: 26vh;
+    }
+
+    .values{
+        padding-left: 0px;
+    }
+
+
+    .seperator{
+        padding-top: 10vh;
+        gap: 19vh;
+    }
+
+    .value{
+        grid-template-columns: auto auto auto;
+        gap: 30px;
+    }
+
+    .skill{
+        width: 21vw;
+    }
+
+    .skill div{
+        padding-left: 10px;
+        font-size: 10px;        
+    }
+}
