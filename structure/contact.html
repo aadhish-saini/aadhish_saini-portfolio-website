@@ -2,93 +2,363 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Contact</title>
-    <link rel="stylesheet" href="css/contact_style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Aadhish Saini</title>
+
+    <link rel="stylesheet"
+        href="../css/contact_style.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/website-logo.png" alt="logo not found!">
+
+    <!-- LOADER -->
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <p>CONTACT</p>
+
+            <h1>
+                LET'S
+                <span>TALK.</span>
+            </h1>
+
+            <div class="loader-line">
+                <div class="loader-progress"></div>
             </div>
 
-            <ul>
+        </div>
+
+    </div>
+
+
+    <!-- BACKGROUND -->
+
+    <div class="background">
+
+        <div class="grid"></div>
+
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <header id="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <span>&lt;</span>AS<span>/&gt;</span>
+            </a>
+
+            <ul class="nav-links">
+
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html" id="contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="container">
-            <div class="alltext">
-                <div class="text">
-                    <h2>LET's CONNECT</h2>
-                    <hr>
-                    <h1>Have a project in mind?</h1>
-                    <h3>I'm always open for discussing new opportunities, collaborations, or just having a chat.</h3>
-                    <div class="maingrid">
-                        <div class="grid">
-                            <div class="item">
-                                <div class="items">
-                                    <i class="fa-regular fa-envelope"></i>
-                                    <h4>aadhishsaini14@gmail.com</h4>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="items">
-                                    <i class="fa-solid fa-phone-flip"></i>
-                                    <h4>+91 94855-50490</h4>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="items">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    <h4>India</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="inputs">
-                <div class="inputcontainer">
-                    <h1>Connect with me !</h1>
-                    <div class="name">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" id="" required>
-                    </div>
-                    <select required id="subject">
-                        <option value="" selected>Select Subject</option>
-                        <option value="project-inquiry">Project Inquiry</option>
-                        <option value="freelance-work">Freelance Work</option>
-                        <option value="job-opportunity">Job Opportunity</option>
-                        <option value="internship">Internship Opportunity</option>
-                        <option value="collaboration">Collaboration</option>
-                        <option value="website-development">Website Development</option>
-                        <option value="python-automation">Python Automation</option>
-                        <option value="technical-support">Technical Support</option>
-                        <option value="feedback">Feedback</option>
-                        <option value="general-question">General Question</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <textarea placeholder="Message" id=""></textarea>
-                    <button>Send <i class="fa-solid fa-paper-plane"></i></button>
-                </div>
-            </div>
-        </div>
+                <li><a href="contact.html" class="active">Contact</a></li>
 
+            </ul>
+
+            <a href="../files/Aadhish_resume.pdf"
+                target="_blank"
+                class="resume-btn">
+
+                Resume
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="contact-hero">
+
+            <p class="section-label reveal">
+                04 / CONTACT
+            </p>
+
+            <h1 class="reveal">
+
+                Let's create
+                something
+
+                <span>great.</span>
+
+            </h1>
+
+            <p class="hero-text reveal">
+
+                Have an idea, project, or just want to connect?
+                Feel free to reach out.
+
+            </p>
+
+        </section>
+
+
+        <section class="contact-section">
+
+            <!-- CONTACT INFO -->
+
+            <div class="contact-info">
+
+                <p class="section-label reveal">
+                    GET IN TOUCH
+                </p>
+
+                <h2 class="reveal">
+
+                    I'm always open
+                    to new
+
+                    <span>conversations.</span>
+
+                </h2>
+
+
+                <div class="contact-links">
+
+                    <a href="mailto:your-email@example.com"
+                        class="contact-item reveal">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+                        <div>
+
+                            <small>EMAIL</small>
+
+                            <p>
+                                your-email@example.com
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="https://github.com/aadhish-saini"
+                        target="_blank"
+                        class="contact-item reveal">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </div>
+
+                        <div>
+
+                            <small>GITHUB</small>
+
+                            <p>
+                                github.com/aadhish-saini
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="https://www.linkedin.com/in/aadhish-saini-797036405/"
+                        target="_blank"
+                        class="contact-item reveal">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </div>
+
+                        <div>
+
+                            <small>LINKEDIN</small>
+
+                            <p>
+                                Connect with me
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <form class="contact-form reveal">
+
+                <div class="form-group">
+
+                    <label>Your Name</label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Subject</label>
+
+                    <input
+                        type="text"
+                        placeholder="What's this about?">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Message</label>
+
+                    <textarea
+                        placeholder="Tell me about your idea..."
+                        required></textarea>
+
+                </div>
+
+
+                <button type="submit"
+                    class="send-btn">
+
+                    Send Message
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- SOCIAL CTA -->
+
+        <section class="social-section reveal">
+
+            <p>
+                OR FIND ME HERE
+            </p>
+
+            <div class="social-links">
+
+                <a href="https://github.com/aadhish-saini"
+                    target="_blank">
+
+                    <i class="fa-brands fa-github"></i>
+
+                    GitHub
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/aadhish-saini-797036405/"
+                    target="_blank">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                    LinkedIn
+
+                </a>
+
+
+                <a href="https://www.instagram.com/aadhish_saini/"
+                    target="_blank">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                    Instagram
+
+                </a>
+
+            </div>
+
+        </section>
 
     </main>
+
+
     <footer>
-        <p>Copyrights Reverved &copy; | Aadhish Saini</p>
+
+        <div>
+
+            © <span id="year"></span>
+            Aadhish Saini
+
+        </div>
+
+        <p>
+            Thanks for visiting.
+        </p>
+
     </footer>
+
+
+    <!-- PAGE TRANSITION -->
+
+    <div id="page-transition">
+
+        <div class="transition-content">
+
+            <span>&lt;/&gt;</span>
+
+            <p>Loading next experience...</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/script.js"></script>
+
 </body>
 
 </html>

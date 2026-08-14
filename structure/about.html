@@ -4,100 +4,384 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - About</title>
-    <link rel="stylesheet" href="css/about_style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>About | Aadhish Saini</title>
+
+    <link rel="stylesheet" href="../css/about_style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/website-logo.png" alt="logo not found!">
+
+    <!-- OPENING LOADER -->
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <p>ABOUT ME</p>
+
+            <h1>
+                WHO I
+                <span>AM.</span>
+            </h1>
+
+            <div class="loader-line">
+                <div class="loader-progress"></div>
             </div>
 
-            <ul>
+        </div>
+
+    </div>
+
+
+    <!-- BACKGROUND -->
+
+    <div class="background">
+
+        <div class="grid"></div>
+
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <header id="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <span>&lt;</span>AS<span>/&gt;</span>
+            </a>
+
+            <ul class="nav-links">
+
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" id="about">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html" id="contact">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
 
             </ul>
+
+            <a href="../files/Aadhish_resume.pdf"
+                class="resume-btn"
+                target="_blank">
+
+                Resume
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
         </nav>
+
     </header>
+
+
     <main>
 
-        <div class="container">
-            <div class="alltext">
+        <!-- PAGE HERO -->
 
-                <div class="text">
-                    <h2>ABOUT ME</h2>
-                    <hr>
-                    <h1>Get to know me!</h1>
-                    <h3>I'm a B.Tech Computer Science student passionate about Web Development, Software Development,
-                        and Python Automation. I enjoy building clean, user-friendly applications and solving real-world
-                        problems with code.</h3>
+        <section class="page-hero">
 
-                    <div class="textcontainer">
-                        <div class="icons">
-                            <i class="fa-solid fa-calendar-days"></i>
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <i class="fa-regular fa-envelope"></i>
-                        </div>
-                        <div class="icontext">
-                            <p>Age :</p>
-                            <p>Education :</p>
-                            <p>Location :</p>
-                            <p>Email :</p>
-                        </div>
-                        <div class="maintext">
-                            <p>18</p>
-                            <p>B.Tech Computer Science</p>
-                            <p>India</p>
-                            <p>aadhishsaini14@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
+            <p class="section-label reveal">
+                01 / ABOUT
+            </p>
+
+            <h1 class="reveal">
+                More than just
+                <span>code.</span>
+            </h1>
+
+            <p class="hero-text reveal">
+
+                I'm an aspiring developer who enjoys learning,
+                experimenting, and transforming ideas into
+                useful digital experiences.
+
+            </p>
+
+        </section>
+
+
+        <!-- ABOUT CONTENT -->
+
+        <section class="about-section">
+
+            <div class="about-number reveal">
+                <span>01</span>
             </div>
-            <div class="maingrid">
-                <div class="grid">
-                    <div class="item">
-                        <div class="item2">
-                            <i class="fa-brands fa-html5"></i>
-                            <h1>Frontend Development</h1>
-                            <div>Building responsive and modern websites.</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item2">
-                            <i class="fa-solid fa-laptop"></i>
-                            <h1>Software Development</h1>
-                            <div>Creating efficient and scalable applications.</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item2">
-                            <i class="fa-brands fa-python"></i>
-                            <h1>Python Automation</h1>
-                            <div>Automating tasks and boosting productivity.</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item2">
-                            <i class="fa-solid fa-puzzle-piece"></i>
-                            <h1>Problem Solving</h1>
-                            <div>Turning ideas into practical and impactful solutions.</div>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="about-content">
+
+                <p class="section-label reveal">
+                    WHO AM I?
+                </p>
+
+                <h2 class="reveal">
+
+                    Building my journey,
+                    <span>one project at a time.</span>
+
+                </h2>
+
+                <p class="reveal">
+
+                    I'm Aadhish Saini, a student and aspiring
+                    software developer with a strong interest in
+                    technology, web development, and problem solving.
+
+                </p>
+
+                <p class="reveal">
+
+                    I enjoy understanding how things work and then
+                    using that knowledge to build something practical.
+                    Whether it is a website, a software project, or
+                    an automation idea, I like the process of turning
+                    an idea into something real.
+
+                </p>
+
+                <p class="reveal">
+
+                    Currently, I'm focused on strengthening my skills
+                    in JavaScript, modern web development, backend
+                    technologies, Python, and software development.
+
+                </p>
+
             </div>
-        </div>
+
+        </section>
+
+
+        <!-- JOURNEY -->
+
+        <section class="journey-section">
+
+            <div class="journey-header">
+
+                <p class="section-label reveal">
+                    MY JOURNEY
+                </p>
+
+                <h2 class="reveal">
+                    Learning.
+                    <span>Building.</span>
+                    Improving.
+                </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-year">
+                        START
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <h3>Programming Fundamentals</h3>
+
+                        <p>
+
+                            Started building a foundation in programming,
+                            problem solving, C++, Python, object-oriented
+                            programming, and data structures.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-year">
+                        WEB
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <h3>Web Development</h3>
+
+                        <p>
+
+                            Learned HTML, CSS, and JavaScript and started
+                            building responsive websites and interactive
+                            frontend projects.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-year">
+                        NOW
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <h3>Building Bigger Projects</h3>
+
+                        <p>
+
+                            Exploring modern web development, APIs,
+                            backend technologies, databases, AI tools,
+                            and collaborative software development.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERESTS -->
+
+        <section class="interests-section">
+
+            <p class="section-label reveal">
+                WHAT INTERESTS ME
+            </p>
+
+            <div class="interest-grid">
+
+                <div class="interest-card reveal">
+
+                    <div class="icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <h3>Web Development</h3>
+
+                    <p>
+                        Creating modern, responsive, and interactive
+                        web experiences.
+                    </p>
+
+                </div>
+
+
+                <div class="interest-card reveal">
+
+                    <div class="icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <h3>AI & Technology</h3>
+
+                    <p>
+                        Exploring how AI can help solve practical
+                        real-world problems.
+                    </p>
+
+                </div>
+
+
+                <div class="interest-card reveal">
+
+                    <div class="icon">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                    </div>
+
+                    <h3>Problem Solving</h3>
+
+                    <p>
+                        Breaking complex problems into smaller,
+                        manageable solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="about-cta reveal">
+
+            <p>WHAT'S NEXT?</p>
+
+            <h2>
+                Let's build something
+                <span>great together.</span>
+            </h2>
+
+            <a href="contact.html" class="primary-btn">
+
+                Get In Touch
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
     </main>
+
+
     <footer>
-        <p>Copyrights Reverved &copy; | Aadhish Saini</p>
+
+        <div>
+            © <span id="year"></span> Aadhish Saini
+        </div>
+
+        <p>
+            Keep learning. Keep building.
+        </p>
+
     </footer>
+
+
+    <!-- PAGE TRANSITION -->
+
+    <div id="page-transition">
+
+        <div class="transition-content">
+
+            <span>&lt;/&gt;</span>
+
+            <p>Loading next experience...</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/script.js"></script>
 
 </body>
 

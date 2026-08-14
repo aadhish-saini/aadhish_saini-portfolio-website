@@ -1,107 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Skills</title>
-    <link rel="stylesheet" href="css/project_style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>Projects | Aadhish Saini</title>
+
+    <link rel="stylesheet" href="../css/project_style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/website-logo.png" alt="logo not found!">
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <p>MY WORK</p>
+
+            <h1>
+                SELECTED
+                <span>PROJECTS.</span>
+            </h1>
+
+            <div class="loader-line">
+                <div class="loader-progress"></div>
             </div>
 
-            <ul>
+        </div>
+
+    </div>
+
+
+    <div class="background">
+
+        <div class="grid"></div>
+
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+
+    </div>
+
+
+    <header id="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <span>&lt;</span>AS<span>/&gt;</span>
+            </a>
+
+            <ul class="nav-links">
+
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="skills.html">Skills</a></li>
-                <li><a href="projects.html" id="projects">Projects</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
+
             </ul>
+
+            <a href="../files/Aadhish_resume.pdf"
+                target="_blank"
+                class="resume-btn">
+
+                Resume
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
         </nav>
+
     </header>
+
+
     <main>
-        <div class="container">
-            <div class="text">
-                <h1>MY PROJECTS</h1>
-                <hr>
-                <h3>Here are some of the projects I've worked on. Each project helped me learn and grow as a developer.</h3>
-            </div>
-            <div class="flex">
-                <div class="grid">
-                    <div class="item">
-                        <div class="image">
-                            <img src="images/library management system.png" alt="Image not found">
-                        </div>
-                        <div class="gridtext">
 
-                            <h3>Library Management System</h3>
-                            <h4>A simple responsive library management system to manage tasks easily.</h4>
-                            <div class="content">
-                                <div class="grid1">
-                                    <div>HTML</div>
-                                    <div>CSS</div>
-                                    <div>Python</div>
-                                    <div>Flask</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="last">
-                            <a href="https://github.com/aadhish-saini/Library-Management-System.git" target="_blank">View Project<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <i class="fa-brands fa-github"></i>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="image">
-                            <img src="images/devtools hub.png" alt="Image not found">
-                        </div>
-                        <div class="gridtext">
-                            <h3>Devtools Hub</h3>
-                            <h4>DevTools Hub is a modern, responsive web application built entirely in on HTML, CSS and Javascript.</h4>
-                            <div class="content">
-                                <div class="grid1">
-                                    <div>HTML</div>
-                                    <div>CSS</div>
-                                    <div>API</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="last">
-                            <a href="https://github.com/aadhish-saini/DevHub.git" target="_blank">View Project<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <i class="fa-brands fa-github"></i>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="image">
-                            <img src="images/portfolio.png" alt="Image not found">
-                        </div>
-                        <div class="gridtext">
+        <section class="page-hero">
 
-                            <h3>Portfolio Website</h3>
-                            <h4>A simple responsive portfolio website, that is created using HTML and CSS only.</h4>
-                            <div class="content">
-                                <div class="grid1">
-                                    <div>HTML</div>
-                                    <div>CSS</div>
-                                    <div>JavaScript</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="last">
-                            <a href="https://github.com/aadhish-saini/Portfolio-Website.git" target="_blank">View Project<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <i class="fa-brands fa-github"></i>
-                        </div>
-                    </div>
-                    </div>
+            <p class="section-label reveal">
+                03 / PROJECTS
+            </p>
+
+            <h1 class="reveal">
+                Things I've
+                <span>built.</span>
+            </h1>
+
+            <p class="hero-text reveal">
+
+                A collection of projects where I experiment,
+                learn, and transform ideas into working products.
+
+            </p>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+
+        <section class="projects-section">
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-number">
+                    01
                 </div>
-            </div>
-        </div>
+
+                <div class="project-content">
+
+                    <p class="project-type">
+                        WEB DEVELOPMENT
+                    </p>
+
+                    <h2>
+                        Portfolio Website
+                    </h2>
+
+                    <p class="project-description">
+
+                        A personal portfolio website designed to
+                        showcase my skills, projects, learning journey,
+                        and experience with modern frontend development.
+
+                    </p>
+
+                    <div class="tech-stack">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a href="#">
+
+                            <i class="fa-brands fa-github"></i>
+                            Code
+
+                        </a>
+
+                        <a href="#">
+
+                            Live Preview
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-visual portfolio-visual">
+
+                    <div class="browser">
+
+                        <div class="browser-header">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <div class="browser-content">
+
+                            <div class="fake-nav"></div>
+
+                            <div class="fake-hero"></div>
+
+                            <div class="fake-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project-card reverse reveal">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <div class="project-content">
+
+                    <p class="project-type">
+                        PYTHON PROJECT
+                    </p>
+
+                    <h2>
+                        AI Image Generation
+                    </h2>
+
+                    <p class="project-description">
+
+                        An experimental text-to-image project exploring
+                        the structure and workflow behind AI-powered
+                        image generation.
+
+                    </p>
+
+                    <div class="tech-stack">
+
+                        <span>Python</span>
+                        <span>AI</span>
+                        <span>APIs</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a href="#">
+                            <i class="fa-brands fa-github"></i>
+                            Code
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-visual ai-visual">
+
+                    <div class="ai-circle">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <div class="ai-card card-one"></div>
+                    <div class="ai-card card-two"></div>
+                    <div class="ai-card card-three"></div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-number">
+                    03
+                </div>
+
+                <div class="project-content">
+
+                    <p class="project-type">
+                        HACKATHON CONCEPT
+                    </p>
+
+                    <h2>
+                        Smart Classroom
+                    </h2>
+
+                    <p class="project-description">
+
+                        A smart education platform concept focused on
+                        curriculum management, attendance, scheduling,
+                        and improving the classroom experience.
+
+                    </p>
+
+                    <div class="tech-stack">
+
+                        <span>JavaScript</span>
+                        <span>Node.js</span>
+                        <span>Database</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a href="#">
+                            <i class="fa-brands fa-github"></i>
+                            Code
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-visual smart-visual">
+
+                    <div class="dashboard">
+
+                        <div class="sidebar"></div>
+
+                        <div class="dashboard-main">
+
+                            <div class="dash-title"></div>
+
+                            <div class="dash-cards">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <section class="project-cta reveal">
+
+            <p>MORE PROJECTS COMING SOON</p>
+
+            <h2>
+                I'm always building
+                <span>something new.</span>
+            </h2>
+
+            <a href="contact.html" class="primary-btn">
+
+                Let's Collaborate
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
     </main>
+
+
     <footer>
-        <p>Copyrights Reverved &copy; | Aadhish Saini</p>
+
+        <div>
+            © <span id="year"></span> Aadhish Saini
+        </div>
+
+        <p>Built with curiosity.</p>
+
     </footer>
+
+
+    <div id="page-transition">
+
+        <div class="transition-content">
+
+            <span>&lt;/&gt;</span>
+
+            <p>Loading next experience...</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/script.js"></script>
+
 </body>
+
 </html>

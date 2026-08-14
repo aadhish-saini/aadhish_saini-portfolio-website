@@ -4,72 +4,434 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Home</title>
-    <link rel="stylesheet" href="css/index_style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>Aadhish Saini | Portfolio</title>
+
+    <link rel="stylesheet" href="../css/index_style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="<link rel="stylesheet" href="../css/index_style.css">">
+
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/website-logo.png" alt="logo not found!">
-            </div>
-            <div class="connecting">
 
-                <div class="headings">
-                    
-                    <ul>
-                        <li><a href="index.html" id="home">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="skills.html">Skills</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html" id="contact">Contact</a></li>
-                        
-                    </ul>
-                </div>
-                <div class="downloadbutton">
-                    <a href="files/Aadhish_resume.pdf"><button id="download-button">Download CV <i
-                        class="fa fa-download"></i></button></a>
-                    </div>
-                </div>
+    <!-- OPENING ANIMATION -->
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <p class="loader-small">WELCOME TO</p>
+
+            <h1>
+                AADHISH
+                <span>SAINI</span>
+            </h1>
+
+            <div class="loader-line">
+                <div class="loader-progress"></div>
             </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BACKGROUND -->
+
+    <div class="background">
+
+        <div class="grid"></div>
+
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <header id="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <span>&lt;</span>
+                AS
+                <span>/&gt;</span>
+            </a>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html" class="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="skills.html">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <a href="../files/Aadhish_resume.pdf"
+                class="resume-btn magnetic"
+                target="_blank">
+
+                Resume
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+            <button class="menu-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
         </nav>
 
     </header>
+
+
+    <!-- HERO SECTION -->
+
     <main>
-        <div class="container">
-            <div class="lines">
-                <h2>Hi, I'm</h1>
-                <h1>Aadhish Saini</h1>
-                <h2><span id="typing"></span></h2>
-                <h3>I'm an aspiring Frontend and Software Developer with a passion for Python Automation. I enjoy                    building responsive websites, developing practical applications, and creating automation scripts                    that improve productivity while continuously learning new technologies.</h1>
-                <div class="contacts">
-                    <a href="https://github.com/aadhish-saini">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/aadhish-saini-797036405/">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.instagram.com/aadhish_saini/">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="availability reveal">
+
+                    <span class="status-dot"></span>
+
+                    Available for opportunities
+
                 </div>
+
+
+                <p class="intro reveal">
+
+                    HELLO, I'M
+
+                </p>
+
+
+                <h1 class="hero-title reveal">
+
+                    Aadhish
+                    <span>Saini.</span>
+
+                </h1>
+
+
+                <div class="developer-line reveal">
+
+                    I build as a
+
+                    <span id="typing"></span>
+
+                </div>
+
+
+                <p class="hero-description reveal">
+
+                    An aspiring developer passionate about building
+                    modern websites, practical software, and useful
+                    automation tools.
+
+                    I enjoy turning ideas into interactive digital
+                    experiences while continuously learning new
+                    technologies.
+
+                </p>
+
+
+                <div class="hero-buttons reveal">
+
+                    <a href="projects.html"
+                        class="primary-btn magnetic">
+
+                        View My Work
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="contact.html"
+                        class="secondary-btn magnetic">
+
+                        Let's Talk
+
+                    </a>
+
+                </div>
+
+
+                <div class="socials reveal">
+
+                    <a href="https://github.com/aadhish-saini"
+                        target="_blank"
+                        aria-label="GitHub">
+
+                        <i class="fa-brands fa-github"></i>
+
+                    </a>
+
+
+                    <a href="https://www.linkedin.com/in/aadhish-saini-797036405/"
+                        target="_blank"
+                        aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+
+                    <a href="https://www.instagram.com/aadhish_saini/"
+                        target="_blank"
+                        aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                </div>
+
             </div>
-            <div class="myimage">
-                <!-- <img src="images/image.png" alt="image couldn't be loaded! "> -->
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="hero-visual reveal">
+
+                <div class="orbit orbit-1"></div>
+
+                <div class="orbit orbit-2"></div>
+
+
+                <div class="code-card">
+
+                    <div class="code-header">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <p>developer.js</p>
+
+                    </div>
+
+
+                    <div class="code-body">
+
+                        <p>
+                            <span class="purple">const</span>
+                            developer =
+                            <span class="orange">{</span>
+                        </p>
+
+                        <p class="indent">
+                            name:
+                            <span class="green">"Aadhish"</span>,
+                        </p>
+
+                        <p class="indent">
+                            passion:
+                            <span class="green">"Building"</span>,
+                        </p>
+
+                        <p class="indent">
+                            learning:
+                            <span class="blue">true</span>,
+                        </p>
+
+                        <p class="indent">
+                            creativity:
+                            <span class="blue">∞</span>
+                        </p>
+
+                        <p>
+                            <span class="orange">}</span>;
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card card-html">
+
+                    <i class="fa-brands fa-html5"></i>
+
+                    HTML
+
+                </div>
+
+
+                <div class="floating-card card-js">
+
+                    <i class="fa-brands fa-js"></i>
+
+                    JavaScript
+
+                </div>
+
+
+                <div class="floating-card card-python">
+
+                    <i class="fa-brands fa-python"></i>
+
+                    Python
+
+                </div>
+
             </div>
+
+        </section>
+
+
+        <!-- SCROLL INDICATOR -->
+
+        <div class="scroll-indicator">
+
+            <span>SCROLL TO EXPLORE</span>
+
+            <div class="scroll-line"></div>
+
         </div>
+
+
+        <!-- QUICK STATS -->
+
+        <section class="stats-section">
+
+            <div class="stat reveal">
+
+                <h2 data-target="3">0</h2>
+
+                <p>Core Technologies</p>
+
+            </div>
+
+
+            <div class="stat reveal">
+
+                <h2 data-target="5">0</h2>
+
+                <p>Portfolio Sections</p>
+
+            </div>
+
+
+            <div class="stat reveal">
+
+                <h2 data-target="100">0</h2>
+
+                <p>Percent Curiosity</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="cta-section reveal">
+
+            <p>HAVE AN IDEA?</p>
+
+            <h2>
+                Let's build something
+                <span>awesome.</span>
+            </h2>
+
+            <a href="contact.html"
+                class="primary-btn magnetic">
+
+                Start a Conversation
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
     </main>
 
 
+    <!-- FOOTER -->
 
     <footer>
-        <p>Copyrights Reverved &copy; | Aadhish Saini</p>
+
+        <div>
+
+            © <span id="year"></span>
+            Aadhish Saini
+
+        </div>
+
+        <p>
+            Designed & Built with
+            <span>♥</span>
+        </p>
+
     </footer>
 
-    <script src="js/script.js"></script>
+
+    <!-- CLOSING TRANSITION -->
+
+    <div id="page-transition">
+
+        <div class="transition-content">
+
+            <span>&lt;/&gt;</span>
+
+            <p>Loading next experience...</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/script.js"></script>
+
 </body>
 
 </html>

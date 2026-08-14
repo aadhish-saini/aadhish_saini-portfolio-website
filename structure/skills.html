@@ -1,161 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Skills</title>
-    <link rel="stylesheet" href="css/skills_style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>Skills | Aadhish Saini</title>
+
+    <link rel="stylesheet" href="../css/skills_style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/website-logo.png" alt="logo not found!">
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <p>MY TOOLBOX</p>
+
+            <h1>
+                SKILLS &
+                <span>TECH.</span>
+            </h1>
+
+            <div class="loader-line">
+                <div class="loader-progress"></div>
             </div>
 
-            <ul>
+        </div>
+
+    </div>
+
+
+    <div class="background">
+
+        <div class="grid"></div>
+
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+
+    </div>
+
+
+    <header id="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <span>&lt;</span>AS<span>/&gt;</span>
+            </a>
+
+            <ul class="nav-links">
+
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="skills.html" id="skills">Skills</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="container">
-            <div class="text">
-                <h1>MY SKILLS</h1>
-                <hr>
-                <h3>I enjoy learning new technologies and contineously inproving my skills to build better products.</h3>
-            </div>
-            <div class="grids">
-                <div class="titles">
-                    <div class="item">
-                        <i class="fa-solid fa-code"></i>
-                        <div>
-                            <div>Frontend</div>
-                            <div>Developer</div>
-                         </div>   
-                    </div>
-                    <div class="item">
-                        <i class="fa-solid fa-laptop"></i>
-                        <div>
-                            <div>Backend</div>
-                            <div>Developer</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <i class="fa-solid fa-gear"></i>
-                        <div>
-                            <div>Tools &</div>
-                            <div>Technologies</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <i class="fa-solid fa-puzzle-piece"></i>
-                        <div>Others</div>
-                    </div>
-                </div>
-                <div class="values">
-                    <div class="seperator">
 
-                        <div class="value">
-                            <div class="skill">
-                                <i class="fa-brands fa-html5" style="color:#E34F26;"></i>
-                                <div>HTML5</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-brands fa-css3-alt css" style="color: #1572B6;"></i>
-                                <div>CSS</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-brands fa-js js" style="color: #F7DF1E;"></i>
-                                <div>JavaScript</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-brands fa-react react" style="color: #61DAFB;"></i>
-                                <div>React</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-brands fa-bootstrap bootstrap" style="color: #7952B3;"></i>
-                                <div>BootStrap</div>
-                            </div>
-                        </div>
-                        <div class="value">
-                            <div class="skill">
-                                <i class="fa-brands fa-python python" style="color:#3776AB;"></i>
-                                <div>Python</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-brands fa-node-js node" style="color:#339933;"></i>
-                                <div>Node.js</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-solid fa-server express" style="color:#444444;"></i>
-                                <div>Express.js</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-solid fa-database sql" style="color: #336791;"></i>
-                                <div>My-SQL</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-solid fa-leaf mongodb" style="color: #47A248;"></i>
-                                <div>MongoDB</div>
-                            </div>
-                        </div>
-                        <div class="value">
-                            <div class="skill">
-                                <i class="fa-brands fa-github github" style="color: #181717;"></i>
-                                <div>GitHub</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-solid fa-code vscode" style="color: #007ACC;"></i>
-                                <div>VS Code</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-solid fa-paper-plane postman" style="color: #FF6C37;"></i>
-                                <div>Postman</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-brands fa-docker docker" style="color: #2496ED;"></i>
-                                <div>Docker</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-brands fa-figma figma" style="color: #F24E1E;"></i>
-                                <div>Figma</div>
-                            </div>
-                        </div>
-                        <div class="value">
-                            <div class="skill">
-                                <i class="fa-solid fa-plug api" style="color: #0EA5E9;"></i>
-                                <div>Rest API</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-solid fa-file-code json" style="color: #F4B400;"></i>></i>
-                                <div>JSON</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-brands fa-git-alt git" style="color: #F05032;"></i>
-                                <div>Git</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-brands fa-linux linux" style="color: #FCC624;"></i>
-                                <div>Linux</div>
-                            </div>
-                            <div class="skill">
-                                <i class="fa-solid fa-paintbrush canva" style="color: #00C4CC;"></i>
-                                <div>Canva</div>
-                            </div>
-                        </div>
+            </ul>
+
+            <a href="../files/Aadhish_resume.pdf"
+                target="_blank"
+                class="resume-btn">
+
+                Resume
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-hero">
+
+            <p class="section-label reveal">
+                02 / SKILLS
+            </p>
+
+            <h1 class="reveal">
+                My digital
+                <span>toolbox.</span>
+            </h1>
+
+            <p class="hero-text reveal">
+
+                Technologies I've learned, tools I use,
+                and skills I'm continuously improving.
+
+            </p>
+
+        </section>
+
+
+        <!-- CORE SKILLS -->
+
+        <section class="skills-section">
+
+            <p class="section-label reveal">
+                CORE TECHNOLOGIES
+            </p>
+
+            <div class="skills-grid">
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon html">
+                        <i class="fa-brands fa-html5"></i>
                     </div>
+
+                    <h3>HTML</h3>
+
+                    <p>
+                        Building structured and semantic
+                        web pages.
+                    </p>
+
+                    <div class="skill-level">
+                        <span style="width: 90%"></span>
+                    </div>
+
                 </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon css">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+
+                    <h3>CSS</h3>
+
+                    <p>
+                        Responsive layouts, animations,
+                        and modern UI design.
+                    </p>
+
+                    <div class="skill-level">
+                        <span style="width: 85%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon js">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+
+                    <h3>JavaScript</h3>
+
+                    <p>
+                        Interactive websites, DOM,
+                        APIs, and asynchronous programming.
+                    </p>
+
+                    <div class="skill-level">
+                        <span style="width: 75%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon python">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+
+                    <h3>Python</h3>
+
+                    <p>
+                        Programming, OOP, file handling,
+                        and automation.
+                    </p>
+
+                    <div class="skill-level">
+                        <span style="width: 80%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+
+                    <h3>MySQL</h3>
+
+                    <p>
+                        Working with databases,
+                        queries, and data management.
+                    </p>
+
+                    <div class="skill-level">
+                        <span style="width: 70%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon cpp">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <h3>C++</h3>
+
+                    <p>
+                        Programming fundamentals,
+                        OOP, STL, and problem solving.
+                    </p>
+
+                    <div class="skill-level">
+                        <span style="width: 80%"></span>
+                    </div>
+
+                </div>
+
             </div>
-        </div>
+
+        </section>
+
+
+        <!-- CURRENTLY LEARNING -->
+
+        <section class="learning-section">
+
+            <div class="learning-content">
+
+                <p class="section-label reveal">
+                    CURRENTLY LEARNING
+                </p>
+
+                <h2 class="reveal">
+
+                    Always adding
+                    <span>new tools.</span>
+
+                </h2>
+
+                <p class="reveal">
+
+                    Technology changes quickly, so I believe
+                    learning should never stop. Right now I'm
+                    focusing on expanding my knowledge in modern
+                    frontend and backend development.
+
+                </p>
+
+            </div>
+
+
+            <div class="learning-tags reveal">
+
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Next.js</span>
+                <span>REST APIs</span>
+                <span>Git & GitHub</span>
+                <span>Backend Development</span>
+                <span>AI & LLMs</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOOLS -->
+
+        <section class="tools-section">
+
+            <p class="section-label reveal">
+                TOOLS I USE
+            </p>
+
+            <div class="tools-grid">
+
+                <div class="tool reveal">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <span>Git</span>
+                </div>
+
+                <div class="tool reveal">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </div>
+
+                <div class="tool reveal">
+                    <i class="fa-solid fa-code"></i>
+                    <span>VS Code</span>
+                </div>
+
+                <div class="tool reveal">
+                    <i class="fa-solid fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+
+                <div class="tool reveal">
+                    <i class="fa-solid fa-robot"></i>
+                    <span>AI Tools</span>
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
+
+
     <footer>
-        <p>Copyrights Reverved &copy; | Aadhish Saini</p>
+
+        <div>
+            © <span id="year"></span> Aadhish Saini
+        </div>
+
+        <p>Always learning.</p>
+
     </footer>
+
+
+    <div id="page-transition">
+
+        <div class="transition-content">
+
+            <span>&lt;/&gt;</span>
+
+            <p>Loading next experience...</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/script.js"></script>
+
 </body>
+
 </html>
