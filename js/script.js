@@ -1,324 +1,376 @@
-/* OPENING ANIMATION */
+/* ==========================================================================
+   AADHISH SAINI - PORTFOLIO INTERACTION LOGIC & MICRO-ANIMATIONS
+   Clean, Performant, Mobile-Friendly, Accessible
+   ========================================================================== */
 
-window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-
-    if (loader) {
-        setTimeout(() => {
-            loader.classList.add("loaded");
-        }, 1800);
-    }
+document.addEventListener("DOMContentLoaded", () => {
+    initCursor();
+    initNavbar();
+    initMobileNav();
+    initTypingEffect();
+    initScrollReveal();
+    initMagneticElements();
+    initContactForm();
+    initCopyEmail();
+    initYear();
 });
 
+/* ==========================================================================
+   1. CUSTOM CURSOR SYSTEM
+   ========================================================================== */
 
-/* TYPING EFFECT - ONLY HOME PAGE */
+function initCursor() {
+    // Check if device is touch or doesn't support hover
+    const isTouchDevice = window.matchMedia("(hover: none) or (pointer: coarse)").matches;
+    if (isTouchDevice) return;
 
-const typingElement = document.getElementById("typing");
+    let dot = document.querySelector(".cursor-dot");
+    let ring = document.querySelector(".cursor-ring");
 
-if (typingElement) {
-
-    const words = [
-        "Frontend Developer.",
-        "Software Developer.",
-        "Python Developer.",
-        "Problem Solver."
-    ];
-
-    let wordIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
-
-    function typeEffect() {
-
-        const currentWord = words[wordIndex];
-
-        if (!deleting) {
-
-            typingElement.textContent =
-                currentWord.substring(0, charIndex + 1);
-
-            charIndex++;
-
-            if (charIndex === currentWord.length) {
-
-                deleting = true;
-
-                setTimeout(typeEffect, 1500);
-
-                return;
-            }
-
-        } else {
-
-            typingElement.textContent =
-                currentWord.substring(0, charIndex - 1);
-
-            charIndex--;
-
-            if (charIndex === 0) {
-
-                deleting = false;
-
-                wordIndex =
-                    (wordIndex + 1) % words.length;
-            }
-        }
-
-        setTimeout(
-            typeEffect,
-            deleting ? 50 : 100
-        );
+    // Create cursor elements dynamically if not already in DOM
+    if (!dot) {
+        dot = document.createElement("div");
+        dot.className = "cursor-dot";
+        document.body.appendChild(dot);
+    }
+    if (!ring) {
+        ring = document.createElement("div");
+        ring.className = "cursor-ring";
+        document.body.appendChild(ring);
     }
 
-    typeEffect();
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let ringX = mouseX;
+    let ringY = mouseY;
+    let isHovering = false;
+    let isMouseDown = false;
+    let isVisible = false;
+
+    // Direct tracking for dot, smooth easing for ring
+    window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        if (!isVisible) {
+            isVisible = true;
+            dot.style.opacity = "1";
+            ring.style.opacity = "1";
+        }
+
+        dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+    });
+
+    window.addEventListener("mouseleave", () => {
+        isVisible = false;
+        dot.style.opacity = "0";
+        ring.style.opacity = "0";
+    });
+
+    window.addEventListener("mousedown", () => {
+        isMouseDown = true;
+        document.body.classList.add("cursor-active");
+    });
+
+    window.addEventListener("mouseup", () => {
+        isMouseDown = false;
+        document.body.classList.remove("cursor-active");
+    });
+
+    // Attach hover listeners to all interactive elements
+    function attachCursorListeners() {
+        const interactives = document.querySelectorAll(
+            "a, button, input, textarea, select, .project-card, .skill-card, .journey-card, .achievement-card, .tech-tag, .clickable"
+        );
+
+        interactives.forEach((el) => {
+            el.removeEventListener("mouseenter", handleElementEnter);
+            el.removeEventListener("mouseleave", handleElementLeave);
+
+            el.addEventListener("mouseenter", handleElementEnter);
+            el.addEventListener("mouseleave", handleElementLeave);
+        });
+    }
+
+    function handleElementEnter() {
+        isHovering = true;
+        document.body.classList.add("cursor-hover");
+    }
+
+    function handleElementLeave() {
+        isHovering = false;
+        document.body.classList.remove("cursor-hover");
+    }
+
+    attachCursorListeners();
+
+    // Re-attach after dynamic changes if needed
+    window.addEventListener("load", attachCursorListeners);
+
+    // RAF Loop for silky smooth ring interpolation
+    function render() {
+        if (isVisible) {
+            // Lerp easing (0.18 factor for responsive yet organic drag)
+            ringX += (mouseX - ringX) * 0.18;
+            ringY += (mouseY - ringY) * 0.18;
+
+            ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
+        }
+        requestAnimationFrame(render);
+    }
+    requestAnimationFrame(render);
 }
 
+/* ==========================================================================
+   2. NAVBAR SCROLL EFFECT
+   ========================================================================== */
 
-/* NAVBAR SCROLL EFFECT */
+function initNavbar() {
+    const header = document.getElementById("header");
+    if (!header) return;
 
-const header = document.getElementById("header");
-
-if (header) {
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 50) {
+    const checkScroll = () => {
+        if (window.scrollY > 20) {
             header.classList.add("scrolled");
         } else {
             header.classList.remove("scrolled");
         }
+    };
 
-    });
-
+    window.addEventListener("scroll", checkScroll, { passive: true });
+    checkScroll();
 }
 
+/* ==========================================================================
+   3. MOBILE NAVIGATION DRAWER
+   ========================================================================== */
 
-/* SCROLL REVEAL */
+function initMobileNav() {
+    const menuBtn = document.querySelector(".menu-btn");
+    const overlay = document.querySelector(".mobile-nav-overlay");
+    const drawer = document.querySelector(".mobile-nav-drawer");
+    const closeBtn = document.querySelector(".mobile-close-btn");
+    const mobileLinks = document.querySelectorAll(".mobile-links a");
 
-const revealElements =
-    document.querySelectorAll(".reveal");
+    if (!menuBtn || !drawer) return;
 
-if (revealElements.length > 0) {
+    function openMobileMenu() {
+        drawer.classList.add("is-active");
+        if (overlay) overlay.classList.add("is-active");
+        document.body.style.overflow = "hidden";
+        menuBtn.setAttribute("aria-expanded", "true");
+    }
 
-    const observer =
-        new IntersectionObserver(
-            (entries) => {
+    function closeMobileMenu() {
+        drawer.classList.remove("is-active");
+        if (overlay) overlay.classList.remove("is-active");
+        document.body.style.overflow = "";
+        menuBtn.setAttribute("aria-expanded", "false");
+    }
 
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("show");
-
-                        observer.unobserve(entry.target);
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.12
-            }
-        );
-
-    revealElements.forEach((element) => {
-        observer.observe(element);
+    menuBtn.addEventListener("click", () => {
+        if (drawer.classList.contains("is-active")) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
     });
 
+    if (closeBtn) closeBtn.addEventListener("click", closeMobileMenu);
+    if (overlay) overlay.addEventListener("click", closeMobileMenu);
+
+    mobileLinks.forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && drawer.classList.contains("is-active")) {
+            closeMobileMenu();
+        }
+    });
 }
 
+/* ==========================================================================
+   4. TYPING EFFECT
+   ========================================================================== */
 
-/* ANIMATED COUNTERS */
+function initTypingEffect() {
+    const typingElement = document.getElementById("typing");
+    if (!typingElement) return;
 
-const stats =
-    document.querySelectorAll(".stat h2");
+    const words = [
+        "Software Developer.",
+        "Frontend & React Developer.",
+        "AI & Web Enthusiast.",
+        "Practical Problem Solver."
+    ];
 
-if (stats.length > 0) {
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 90;
 
-    const statsObserver =
-        new IntersectionObserver(
-            (entries) => {
+    function type() {
+        const currentWord = words[wordIndex];
 
-                entries.forEach((entry) => {
+        if (isDeleting) {
+            typingElement.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = 45;
+        } else {
+            typingElement.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+            typingSpeed = 90;
+        }
 
-                    if (!entry.isIntersecting) return;
+        if (!isDeleting && charIndex === currentWord.length) {
+            isDeleting = true;
+            typingSpeed = 1800; // Pause at end of word
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typingSpeed = 400; // Pause before next word
+        }
 
-                    const counter = entry.target;
+        setTimeout(type, typingSpeed);
+    }
 
-                    const target =
-                        Number(counter.dataset.target);
-
-                    let current = 0;
-
-                    const increment =
-                        Math.max(
-                            1,
-                            Math.ceil(target / 50)
-                        );
-
-                    function updateCounter() {
-
-                        current += increment;
-
-                        if (current >= target) {
-
-                            counter.textContent =
-                                target + "+";
-
-                        } else {
-
-                            counter.textContent = current;
-
-                            requestAnimationFrame(
-                                updateCounter
-                            );
-                        }
-                    }
-
-                    updateCounter();
-
-                    statsObserver.unobserve(counter);
-
-                });
-
-            },
-            {
-                threshold: 0.6
-            }
-        );
-
-    stats.forEach((stat) => {
-        statsObserver.observe(stat);
-    });
-
+    type();
 }
 
+/* ==========================================================================
+   5. SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
 
-/* MAGNETIC BUTTONS */
+function initScrollReveal() {
+    const revealElements = document.querySelectorAll(".reveal");
+    if (revealElements.length === 0) return;
 
-const magneticElements =
-    document.querySelectorAll(".magnetic");
+    // Check if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+        revealElements.forEach((el) => el.classList.add("show"));
+        return;
+    }
 
-magneticElements.forEach((element) => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.1,
+            rootMargin: "0px 0px -40px 0px"
+        }
+    );
 
-    element.addEventListener("mousemove", (event) => {
+    revealElements.forEach((el) => observer.observe(el));
+}
 
-        const rect =
-            element.getBoundingClientRect();
+/* ==========================================================================
+   6. MAGNETIC BUTTONS (SUBTLE)
+   ========================================================================== */
 
-        const x =
-            event.clientX -
-            rect.left -
-            rect.width / 2;
+function initMagneticElements() {
+    const isTouch = window.matchMedia("(hover: none) or (pointer: coarse)").matches;
+    if (isTouch) return;
 
-        const y =
-            event.clientY -
-            rect.top -
-            rect.height / 2;
+    const magneticElements = document.querySelectorAll(".magnetic");
 
-        element.style.transform =
-            `translate(${x * 0.12}px, ${y * 0.12}px)`;
+    magneticElements.forEach((el) => {
+        el.addEventListener("mousemove", (e) => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
 
-    });
-
-
-    element.addEventListener("mouseleave", () => {
-
-        element.style.transform =
-            "translate(0, 0)";
-
-    });
-
-});
-
-
-/* PAGE TRANSITION */
-
-const transition =
-    document.getElementById("page-transition");
-
-if (transition) {
-
-    document.querySelectorAll("a").forEach((link) => {
-
-        link.addEventListener("click", (event) => {
-
-            const href =
-                link.getAttribute("href");
-
-            const isInternal =
-                href &&
-                !href.startsWith("http") &&
-                !href.startsWith("#") &&
-                !href.startsWith("mailto:");
-
-            const opensNewTab =
-                link.target === "_blank";
-
-            if (isInternal && !opensNewTab) {
-
-                event.preventDefault();
-
-                transition.classList.add("active");
-
-                setTimeout(() => {
-
-                    window.location.href = href;
-
-                }, 650);
-
-            }
-
+            // Subtle displacement (0.1 max)
+            el.style.transform = `translate3d(${x * 0.12}px, ${y * 0.12}px, 0)`;
         });
 
+        el.addEventListener("mouseleave", () => {
+            el.style.transform = "translate3d(0, 0, 0)";
+            el.style.transition = "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)";
+        });
+
+        el.addEventListener("mouseenter", () => {
+            el.style.transition = "none";
+        });
     });
-
 }
 
+/* ==========================================================================
+   7. CONTACT FORM HANDLING
+   ========================================================================== */
 
-/* FOOTER YEAR */
+function initContactForm() {
+    const form = document.querySelector(".contact-form");
+    if (!form) return;
 
-const year =
-    document.getElementById("year");
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-if (year) {
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (!submitBtn) return;
 
-    year.textContent =
-        new Date().getFullYear();
+        const originalText = submitBtn.innerHTML;
 
-}
-
-
-/* CONTACT FORM DEMO */
-
-const contactForm =
-    document.querySelector(".contact-form");
-
-if (contactForm) {
-
-    contactForm.addEventListener("submit", (event) => {
-
-        event.preventDefault();
-
-        const button =
-            contactForm.querySelector(".send-btn");
-
-        const originalText =
-            button.innerHTML;
-
-        button.innerHTML =
-            'Message Sent <i class="fa-solid fa-check"></i>';
+        // Feedback state
+        submitBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Message Sent Successfully!';
+        submitBtn.style.backgroundColor = "var(--success)";
+        submitBtn.style.borderColor = "var(--success)";
+        submitBtn.disabled = true;
 
         setTimeout(() => {
-
-            button.innerHTML =
-                originalText;
-
-            contactForm.reset();
-
-        }, 2500);
-
+            form.reset();
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.backgroundColor = "";
+            submitBtn.style.borderColor = "";
+            submitBtn.disabled = false;
+        }, 3500);
     });
+}
 
+/* ==========================================================================
+   8. COPY EMAIL BUTTON
+   ========================================================================== */
+
+function initCopyEmail() {
+    const copyBtns = document.querySelectorAll(".copy-email-btn");
+
+    copyBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const email = "aadhishsaini14@gmail.com";
+
+            navigator.clipboard.writeText(email).then(() => {
+                const originalHtml = btn.innerHTML;
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+                btn.classList.add("copied");
+
+                setTimeout(() => {
+                    btn.innerHTML = originalHtml;
+                    btn.classList.remove("copied");
+                }, 2200);
+            }).catch(() => {
+                window.location.href = `mailto:${email}`;
+            });
+        });
+    });
+}
+
+/* ==========================================================================
+   9. FOOTER YEAR
+   ========================================================================== */
+
+function initYear() {
+    const yearElements = document.querySelectorAll(".current-year, #year");
+    const currentYear = new Date().getFullYear();
+
+    yearElements.forEach((el) => {
+        el.textContent = currentYear;
+    });
 }

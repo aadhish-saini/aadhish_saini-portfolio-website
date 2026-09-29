@@ -4,432 +4,571 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aadhish Saini - B.Tech CSE & Software Developer. Building practical web applications, 3D digital twins, and AI solutions.">
+    <meta name="keywords" content="Aadhish Saini, Software Developer, Web Development, React, Three.js, Python, AI/ML, DhruvNetra">
+    <meta name="author" content="Aadhish Saini">
 
-    <title>Aadhish Saini | Portfolio</title>
+    <title>Aadhish Saini | Software Developer</title>
 
-    <link rel="stylesheet" href="css/index_style.css">
-
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <link rel="stylesheet"
-        href="<link rel="stylesheet" href="../css/index_style.css">">
-
+    <!-- Base & Index CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index_style.css">
 </head>
 
 <body>
 
-    <!-- OPENING ANIMATION -->
+    <!-- Subtle Background Pattern -->
+    <div class="bg-grid-pattern" aria-hidden="true"></div>
 
-    <div id="loader">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
 
-        <div class="loader-content">
-
-            <p class="loader-small">WELCOME TO</p>
-
-            <h1>
-                AADHISH
-                <span>SAINI</span>
-            </h1>
-
-            <div class="loader-line">
-                <div class="loader-progress"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- BACKGROUND -->
-
-    <div class="background">
-
-        <div class="grid"></div>
-
-        <div class="glow glow-1"></div>
-        <div class="glow glow-2"></div>
-        <div class="glow glow-3"></div>
-
-    </div>
-
-
-    <!-- NAVBAR -->
-
+    <!-- HEADER / NAVBAR -->
     <header id="header">
-
-        <nav class="navbar">
-
-            <a href="index.html" class="logo">
-                <span>&lt;</span>
-                AS
-                <span>/&gt;</span>
+        <nav class="navbar" aria-label="Main Navigation">
+            <a href="index.html" class="logo" aria-label="Aadhish Saini Home">
+                <span class="logo-tag">&lt;</span>
+                <span class="logo-text">AS</span>
+                <span class="logo-tag">/&gt;</span>
             </a>
-
 
             <ul class="nav-links">
-
-                <li>
-                    <a href="index.html" class="active">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html">
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a href="skills.html">
-                        Skills
-                    </a>
-                </li>
-
-                <li>
-                    <a href="projects.html">
-                        Projects
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contact.html">
-                        Contact
-                    </a>
-                </li>
-
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html#journey">Journey</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
 
+            <div class="nav-right">
+                <a href="files/Aadhish_resume.pdf" class="resume-btn magnetic" target="_blank" rel="noopener noreferrer">
+                    Resume
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
 
-            <a href="files/Aadhish_resume.pdf"
-                class="resume-btn magnetic"
-                target="_blank">
-
-                Resume
-
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-            </a>
-
-
-            <button class="menu-btn">
-
-                <i class="fa-solid fa-bars"></i>
-
-            </button>
-
+                <button class="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </nav>
-
     </header>
 
-
-    <!-- HERO SECTION -->
-
-    <main>
-
-        <section class="hero">
-
-            <div class="hero-content">
-
-                <div class="availability reveal">
-
-                    <span class="status-dot"></span>
-
-                    Available for opportunities
-
-                </div>
-
-
-                <p class="intro reveal">
-
-                    HELLO, I'M
-
-                </p>
-
-
-                <h1 class="hero-title reveal">
-
-                    Aadhish
-                    <span>Saini.</span>
-
-                </h1>
-
-
-                <div class="developer-line reveal">
-
-                    I build as a
-
-                    <span id="typing"></span>
-
-                </div>
-
-
-                <p class="hero-description reveal">
-
-                    An aspiring developer passionate about building
-                    modern websites, practical software, and useful
-                    automation tools.
-
-                    I enjoy turning ideas into interactive digital
-                    experiences while continuously learning new
-                    technologies.
-
-                </p>
-
-
-                <div class="hero-buttons reveal">
-
-                    <a href="projects.html"
-                        class="primary-btn magnetic">
-
-                        View My Work
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-
-                    <a href="contact.html"
-                        class="secondary-btn magnetic">
-
-                        Let's Talk
-
-                    </a>
-
-                </div>
-
-
-                <div class="socials reveal">
-
-                    <a href="https://github.com/aadhish-saini"
-                        target="_blank"
-                        aria-label="GitHub">
-
-                        <i class="fa-brands fa-github"></i>
-
-                    </a>
-
-
-                    <a href="https://www.linkedin.com/in/aadhish-saini-797036405/"
-                        target="_blank"
-                        aria-label="LinkedIn">
-
-                        <i class="fa-brands fa-linkedin-in"></i>
-
-                    </a>
-
-
-                    <a href="https://www.instagram.com/aadhish_saini/"
-                        target="_blank"
-                        aria-label="Instagram">
-
-                        <i class="fa-brands fa-instagram"></i>
-
-                    </a>
-
-                </div>
-
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div class="mobile-nav-overlay" aria-hidden="true"></div>
+    <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Menu">
+        <div>
+            <div class="mobile-nav-header">
+                <a href="index.html" class="logo">
+                    <span class="logo-tag">&lt;</span>
+                    <span class="logo-text">AS</span>
+                    <span class="logo-tag">/&gt;</span>
+                </a>
+                <button class="mobile-close-btn" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
 
-
-            <!-- HERO VISUAL -->
-
-            <div class="hero-visual reveal">
-
-                <div class="orbit orbit-1"></div>
-
-                <div class="orbit orbit-2"></div>
-
-
-                <div class="code-card">
-
-                    <div class="code-header">
-
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                        <p>developer.js</p>
-
-                    </div>
-
-
-                    <div class="code-body">
-
-                        <p>
-                            <span class="purple">const</span>
-                            developer =
-                            <span class="orange">{</span>
-                        </p>
-
-                        <p class="indent">
-                            name:
-                            <span class="green">"Aadhish"</span>,
-                        </p>
-
-                        <p class="indent">
-                            passion:
-                            <span class="green">"Building"</span>,
-                        </p>
-
-                        <p class="indent">
-                            learning:
-                            <span class="blue">true</span>,
-                        </p>
-
-                        <p class="indent">
-                            creativity:
-                            <span class="blue">∞</span>
-                        </p>
-
-                        <p>
-                            <span class="orange">}</span>;
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="floating-card card-html">
-
-                    <i class="fa-brands fa-html5"></i>
-
-                    HTML
-
-                </div>
-
-
-                <div class="floating-card card-js">
-
-                    <i class="fa-brands fa-js"></i>
-
-                    JavaScript
-
-                </div>
-
-
-                <div class="floating-card card-python">
-
-                    <i class="fa-brands fa-python"></i>
-
-                    Python
-
-                </div>
-
+            <div class="mobile-links">
+                <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="about.html"><i class="fa-solid fa-user"></i> About</a>
+                <a href="skills.html"><i class="fa-solid fa-code"></i> Skills</a>
+                <a href="projects.html"><i class="fa-solid fa-layer-group"></i> Projects</a>
+                <a href="about.html#journey"><i class="fa-solid fa-timeline"></i> Journey</a>
+                <a href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact</a>
             </div>
-
-        </section>
-
-
-        <!-- SCROLL INDICATOR -->
-
-        <div class="scroll-indicator">
-
-            <span>SCROLL TO EXPLORE</span>
-
-            <div class="scroll-line"></div>
-
         </div>
 
+        <div class="mobile-nav-footer">
+            <a href="files/Aadhish_resume.pdf" class="primary-btn" style="width: 100%;" target="_blank">
+                <i class="fa-solid fa-file-pdf"></i> View Resume
+            </a>
+        </div>
+    </div>
 
-        <!-- QUICK STATS -->
+    <!-- MAIN CONTENT -->
+    <main>
 
-        <section class="stats-section">
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="hero">
+            <div class="hero-left">
+                <div class="status-pill reveal">
+                    <span class="status-dot"></span>
+                    <span>Available for opportunities</span>
+                </div>
 
-            <div class="stat reveal">
+                <p class="hero-intro reveal delay-1">Hello, I'm</p>
 
-                <h2 data-target="3">0</h2>
+                <h1 class="hero-title reveal delay-1">
+                    Aadhish <span class="accent-text">Saini.</span>
+                </h1>
 
-                <p>Core Technologies</p>
+                <div class="hero-subtitle reveal delay-2">
+                    <span>B.Tech CSE</span>
+                    <span style="color: var(--text-subtle);">|</span>
+                    <span id="typing" class="typing-wrapper">Software Developer.</span>
+                </div>
 
+                <p class="hero-desc reveal delay-2">
+                    Computer Science undergraduate focused on building practical, user-focused digital products and exploring modern web technologies, AI and interactive experiences.
+                </p>
+
+                <div class="hero-actions reveal delay-3">
+                    <a href="projects.html" class="primary-btn magnetic">
+                        <i class="fa-solid fa-folder-open"></i>
+                        View Projects
+                    </a>
+                    <a href="contact.html" class="secondary-btn magnetic">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        Contact Me
+                    </a>
+                </div>
+
+                <div class="hero-socials reveal delay-4">
+                    <span class="hero-socials-label">Connect:</span>
+                    <a href="https://github.com/aadhish-saini" class="social-pill" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aadhish-saini-797036405/" class="social-pill" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:aadhishsaini14@gmail.com" class="social-pill" aria-label="Send Email">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
             </div>
 
+            <!-- HERO RIGHT: Clean Code Editor Window -->
+            <div class="hero-right reveal delay-2">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot-red"></span>
+                            <span class="dot-yellow"></span>
+                            <span class="dot-green"></span>
+                        </div>
+                        <div class="window-filename">
+                            <i class="fa-solid fa-file-code"></i>
+                            developer.ts
+                        </div>
+                        <div class="window-badge">
+                            Active
+                        </div>
+                    </div>
 
-            <div class="stat reveal">
+                    <div class="window-body">
+                        <div class="code-line">
+                            <span class="syn-keyword">const</span>&nbsp;<span class="syn-var">developer</span> = {
+                        </div>
+                        <div class="code-line code-indent">
+                            <span class="syn-prop">name:</span>&nbsp;<span class="syn-string">"Aadhish Saini"</span>,
+                        </div>
+                        <div class="code-line code-indent">
+                            <span class="syn-prop">education:</span>&nbsp;<span class="syn-string">"B.Tech CSE Undergraduate"</span>,
+                        </div>
+                        <div class="code-line code-indent">
+                            <span class="syn-prop">focus:</span>&nbsp;[<span class="syn-string">"Web Apps"</span>, <span class="syn-string">"AI/ML"</span>, <span class="syn-string">"Three.js"</span>],
+                        </div>
+                        <div class="code-line code-indent syn-highlight">
+                            <span class="syn-prop">majorProject:</span>&nbsp;<span class="syn-string">"DhruvNetra"</span>,
+                        </div>
+                        <div class="code-line code-indent">
+                            <span class="syn-prop">hackathonRank:</span>&nbsp;<span class="syn-string">"Top 7 of 63 Teams"</span>,
+                        </div>
+                        <div class="code-line code-indent">
+                            <span class="syn-prop">learningContinously:</span>&nbsp;<span class="syn-bool">true</span>
+                        </div>
+                        <div class="code-line">
+                            };
+                        </div>
+                        <div class="code-line syn-comment" style="margin-top: 8px;">
+                            // Building reliable, practical software solutions
+                        </div>
+                    </div>
 
-                <h2 data-target="5">0</h2>
-
-                <p>Portfolio Sections</p>
-
+                    <div class="window-footer-preview">
+                        <div class="preview-tag">
+                            <i class="fa-solid fa-cube"></i>
+                            <span>Antarctic Digital Twin</span>
+                        </div>
+                        <a href="projects.html" class="outline-btn" style="padding: 4px 10px; font-size: 0.78rem;">
+                            Explore Work <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-
-
-            <div class="stat reveal">
-
-                <h2 data-target="100">0</h2>
-
-                <p>Percent Curiosity</p>
-
-            </div>
-
         </section>
 
+        <!-- METRICS / HIGHLIGHTS BAR -->
+        <section class="metrics-section reveal">
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <div class="metric-text">
+                        <h4>3+ Domains</h4>
+                        <p>Web, AI/ML & 3D Twins</p>
+                    </div>
+                </div>
 
-        <!-- CTA -->
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <div class="metric-text">
+                        <h4>6+ Projects</h4>
+                        <p>Practical Implementations</p>
+                    </div>
+                </div>
 
-        <section class="cta-section reveal">
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="metric-text">
+                        <h4>Rank 7 / 63</h4>
+                        <p>College Hackathon Winner</p>
+                    </div>
+                </div>
 
-            <p>HAVE AN IDEA?</p>
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="metric-text">
+                        <h4>B.Tech CSE</h4>
+                        <p>Computer Science Student</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <h2>
-                Let's build something
-                <span>awesome.</span>
-            </h2>
+        <!-- FEATURED PROJECTS SECTION -->
+        <section class="featured-projects-section" id="featured-work">
+            <div class="section-header-row reveal">
+                <div>
+                    <span class="section-eyebrow"><i class="fa-solid fa-star"></i> Featured Work</span>
+                    <h2 class="section-title">Projects I've Built.</h2>
+                    <p class="section-subtitle">A curated look at my major projects, ranging from offline-first digital twin platforms to AI speech detection and procurement intelligence.</p>
+                </div>
+                <a href="projects.html" class="secondary-btn magnetic">
+                    View All Projects <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
 
-            <a href="contact.html"
-                class="primary-btn magnetic">
+            <!-- PRIMARY FEATURED PROJECT: DhruvNetra -->
+            <article class="primary-project-card reveal">
+                <div class="primary-card-img-wrapper">
+                    <img src="images/DhruvNetra.png" alt="DhruvNetra Antarctic Digital Twin Platform Screenshot" loading="lazy">
+                    <div class="primary-card-badge-overlay">
+                        <span class="badge badge-blue"><i class="fa-solid fa-star"></i> Primary Featured Project</span>
+                    </div>
+                </div>
 
-                Start a Conversation
+                <div class="primary-card-content">
+                    <div>
+                        <div class="primary-card-header">
+                            <p class="primary-card-category">Antarctic Digital Twin & Remote Operations</p>
+                            <h3 class="primary-card-title">DhruvNetra</h3>
+                        </div>
 
-                <i class="fa-solid fa-arrow-right"></i>
+                        <p class="primary-card-desc">
+                            An offline-first digital twin and remote operations platform for Antarctic research stations, enabling real-time monitoring, 3D visualization, AI-based anomaly detection, predictive insights, and secure remote decision-making even with limited connectivity.
+                        </p>
 
-            </a>
+                        <div class="primary-highlights">
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Offline-first resilience with local synchronization</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Interactive 3D research station spatial visualization</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>AI anomaly detection for environmental & station telemetry</span>
+                            </div>
+                        </div>
 
+                        <div class="primary-tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Three.js</span>
+                        </div>
+                    </div>
+
+                    <div class="primary-card-links">
+                        <a href="projects.html" class="primary-btn" style="padding: 9px 18px; font-size: 0.88rem;">
+                            <i class="fa-solid fa-circle-info"></i> Project Details
+                        </a>
+                        <a href="https://github.com/aadhish-saini" class="outline-btn" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SECONDARY PROJECTS GRID: VoiceShield & BharatManak -->
+            <div class="secondary-projects-grid">
+
+                <!-- Project 2: AI Voice Detector / VoiceShield -->
+                <article class="secondary-project-card reveal delay-1">
+                    <div class="secondary-card-img-wrapper">
+                        <img src="images/ai voice guard.png" alt="AI Voice Detector and VoiceShield Platform Preview" loading="lazy">
+                    </div>
+                    <div class="secondary-card-content">
+                        <p class="secondary-card-category">AI / Audio Processing</p>
+                        <h3 class="secondary-card-title">AI Voice Detector / VoiceShield</h3>
+                        <p class="secondary-card-desc">
+                            A web-based AI voice detection platform that analyzes audio characteristics to identify AI-generated and human speech with a clear, easy-to-understand result.
+                        </p>
+                        <div class="secondary-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Audio Processing</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                        <div class="secondary-card-links">
+                            <a href="projects.html">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="https://github.com/aadhish-saini" target="_blank" rel="noopener noreferrer" aria-label="Source code on GitHub">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: BharatManak -->
+                <article class="secondary-project-card reveal delay-2">
+                    <div class="secondary-card-img-wrapper">
+                        <img src="images/bharatmanak.png" alt="BharatManak AI Indian Standards Platform Preview" loading="lazy">
+                    </div>
+                    <div class="secondary-card-content">
+                        <p class="secondary-card-category">AI & Procurement Data</p>
+                        <h3 class="secondary-card-title">BharatManak</h3>
+                        <p class="secondary-card-desc">
+                            An AI-powered platform that recommends relevant Indian Standards based on procurement specifications, simplifying standards identification and compliance.
+                        </p>
+                        <div class="secondary-tech-stack">
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Procurement Data</span>
+                        </div>
+                        <div class="secondary-card-links">
+                            <a href="projects.html">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="https://github.com/aadhish-saini" target="_blank" rel="noopener noreferrer" aria-label="Source code on GitHub">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ABOUT & ACHIEVEMENTS HIGHLIGHT SECTION -->
+        <section class="about-highlight-section">
+            <div class="about-highlight-text reveal">
+                <span class="section-eyebrow"><i class="fa-solid fa-user"></i> About Me</span>
+                <h3>Building my journey through hands-on development.</h3>
+                <p>
+                    I am a B.Tech Computer Science student with a keen interest in software engineering, web development, and practical AI systems. I focus on understanding foundational concepts deeply and applying them to solve real-world technical problems.
+                </p>
+                <p>
+                    From designing 3D digital twins with Three.js to training audio classifiers and building full-stack reactive applications, I enjoy writing clean, structured code and learning modern technologies continuously.
+                </p>
+                <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="about.html" class="primary-btn magnetic">
+                        Read My Story <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="about.html#journey" class="outline-btn">
+                        <i class="fa-solid fa-timeline"></i> View Journey
+                    </a>
+                </div>
+            </div>
+
+            <!-- Achievement Card -->
+            <div class="achievement-card reveal delay-1">
+                <div class="achievement-header">
+                    <div class="achievement-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="achievement-title-area">
+                        <h4>Internal College Hackathon Winner</h4>
+                        <p>Competitive Coding & Innovation</p>
+                    </div>
+                </div>
+
+                <div class="achievement-badge">
+                    <i class="fa-solid fa-award"></i> Secured Rank 7 among 63 teams
+                </div>
+
+                <p class="achievement-desc">
+                    Collaborated with a competitive engineering mindset to develop and demonstrate a high-impact solution solving real-world constraints under intense competition timelines.
+                </p>
+            </div>
+        </section>
+
+        <!-- SKILLS OVERVIEW SECTION -->
+        <section class="skills-overview-section">
+            <div class="section-header-row reveal">
+                <div>
+                    <span class="section-eyebrow"><i class="fa-solid fa-cubes"></i> Core Toolbox</span>
+                    <h2 class="section-title">Technologies I Work With.</h2>
+                    <p class="section-subtitle">A straightforward overview of the programming languages, frontend tools, and databases I actively use in my projects.</p>
+                </div>
+                <a href="skills.html" class="outline-btn">
+                    Explore All Skills <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="skills-categories-grid">
+                <!-- Languages -->
+                <div class="skill-category-card reveal delay-1">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fa-solid fa-code"></i></div>
+                        <h4 class="category-title">Languages</h4>
+                    </div>
+                    <div class="category-chips">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="skill-category-card reveal delay-2">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fa-solid fa-desktop"></i></div>
+                        <h4 class="category-title">Frontend</h4>
+                    </div>
+                    <div class="category-chips">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">HTML5 / CSS3</span>
+                        <span class="tech-tag">Responsive UI</span>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="skill-category-card reveal delay-3">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fa-solid fa-database"></i></div>
+                        <h4 class="category-title">Database</h4>
+                    </div>
+                    <div class="category-chips">
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Schema Design</span>
+                        <span class="tech-tag">Relational Data</span>
+                    </div>
+                </div>
+
+                <!-- Other Tools -->
+                <div class="skill-category-card reveal delay-4">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fa-solid fa-toolbox"></i></div>
+                        <h4 class="category-title">Other & Tools</h4>
+                    </div>
+                    <div class="category-chips">
+                        <span class="tech-tag">Three.js</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">GitHub</span>
+                        <span class="tech-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-banner-section reveal">
+            <div class="cta-card">
+                <span class="section-eyebrow"><i class="fa-regular fa-paper-plane"></i> Get In Touch</span>
+                <h2>Let's build something useful.</h2>
+                <p>
+                    I'm always interested in building practical projects, learning new technologies, and collaborating on interesting ideas. Feel free to reach out.
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="primary-btn magnetic">
+                        <i class="fa-solid fa-envelope"></i> Send a Message
+                    </a>
+                    <a href="https://www.linkedin.com/in/aadhish-saini-797036405/" class="secondary-btn magnetic" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
+                    </a>
+                    <a href="https://github.com/aadhish-saini" class="outline-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i> GitHub Profile
+                    </a>
+                </div>
+            </div>
         </section>
 
     </main>
 
-
     <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>AADHISH SAINI</h3>
+                    <p>B.Tech CSE | Software Developer</p>
+                </div>
 
-    <footer>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="about.html#journey">Journey</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
 
-        <div>
+                <div class="footer-socials">
+                    <a href="https://github.com/aadhish-saini" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aadhish-saini-797036405/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:aadhishsaini14@gmail.com" aria-label="Email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
 
-            © <span id="year"></span>
-            Aadhish Saini
-
+            <div class="footer-bottom">
+                <div>
+                    © <span class="current-year">2026</span> Aadhish Saini. Built with curiosity and code.
+                </div>
+                <div>
+                    All projects developed with modern web standards.
+                </div>
+            </div>
         </div>
-
-        <p>
-            Designed & Built with
-            <span>♥</span>
-        </p>
-
     </footer>
 
-
-    <!-- CLOSING TRANSITION -->
-
-    <div id="page-transition">
-
-        <div class="transition-content">
-
-            <span>&lt;/&gt;</span>
-
-            <p>Loading next experience...</p>
-
-        </div>
-
-    </div>
-
-
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
