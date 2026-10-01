@@ -104,7 +104,8 @@
 .fact-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 14px;
     padding-bottom: 12px;
     border-bottom: 1px solid var(--border-subtle);
     font-size: 0.9rem;
@@ -119,11 +120,14 @@
     color: var(--text-muted);
     font-family: var(--font-mono);
     font-size: 0.82rem;
+    flex-shrink: 0;
 }
 
 .fact-val {
     font-weight: 600;
     color: var(--text-primary);
+    text-align: right;
+    word-break: normal;
 }
 
 /* ==========================================================================
@@ -395,7 +399,7 @@
 @media (max-width: 920px) {
     .about-main-container {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 36px;
     }
 
     .achievements-grid {
@@ -408,15 +412,36 @@
 }
 
 @media (max-width: 600px) {
+    .about-story div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-story a {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
     .timeline-wrapper {
-        padding-left: 24px;
+        padding-left: 28px;
     }
 
     .timeline-marker {
-        left: -24px;
+        left: -28px;
+        width: 14px;
+        height: 14px;
     }
 
     .timeline-card {
-        padding: 20px 18px;
+        padding: 18px 16px;
+    }
+
+    .achievement-box {
+        padding: 22px 18px;
+    }
+
+    .approach-card {
+        padding: 22px 18px;
     }
 }

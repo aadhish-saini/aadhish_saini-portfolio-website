@@ -103,6 +103,8 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .skill-card-identity {
@@ -167,6 +169,8 @@
     font-size: 0.8rem;
     color: var(--text-subtle);
     font-family: var(--font-mono);
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .skill-card-footer span i {
@@ -240,6 +244,10 @@
     }
 
     .skill-item-card {
-        padding: 20px;
+        padding: 18px 16px;
+    }
+
+    .workflow-card {
+        padding: 20px 18px;
     }
 }

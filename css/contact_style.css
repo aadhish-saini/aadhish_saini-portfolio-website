@@ -84,7 +84,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 14px;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    box-sizing: border-box;
 }
 
 .direct-channel-card:hover {
@@ -97,11 +99,15 @@
     display: flex;
     align-items: center;
     gap: 16px;
+    min-width: 0;
+    flex: 1;
 }
 
 .channel-icon {
     width: 44px;
     height: 44px;
+    min-width: 44px;
+    min-height: 44px;
     border-radius: var(--radius-md);
     background-color: var(--bg-surface-muted);
     border: 1px solid var(--border-light);
@@ -109,11 +115,16 @@
     place-items: center;
     font-size: 1.2rem;
     color: var(--accent);
+    flex-shrink: 0;
 }
 
 .channel-icon.github { color: #0f172a; }
 .channel-icon.linkedin { color: #0a66c2; }
 .channel-icon.email { color: #2563eb; }
+
+.channel-details {
+    min-width: 0;
+}
 
 .channel-details h4 {
     font-size: 0.8rem;
@@ -128,6 +139,8 @@
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-primary);
+    overflow-wrap: anywhere;
+    word-break: break-all;
 }
 
 .channel-action {
@@ -137,6 +150,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    flex-shrink: 0;
 }
 
 /* Contact Form Card */
@@ -250,7 +264,7 @@
 @media (max-width: 920px) {
     .contact-layout {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 36px;
     }
 }
 
@@ -264,6 +278,30 @@
     }
 
     .contact-form-card {
-        padding: 24px 20px;
+        padding: 22px 18px;
+    }
+
+    .direct-channel-card {
+        padding: 16px 14px;
+        gap: 12px;
+    }
+
+    .channel-left {
+        gap: 12px;
+    }
+
+    .availability-banner {
+        padding: 14px 16px;
+    }
+}
+
+@media (max-width: 440px) {
+    .direct-channel-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .direct-channel-card .channel-action {
+        align-self: flex-end;
     }
 }

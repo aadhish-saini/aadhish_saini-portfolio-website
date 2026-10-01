@@ -35,12 +35,14 @@
 }
 
 .hero-title {
-    font-size: clamp(2.75rem, 5.5vw, 4.25rem);
+    font-size: clamp(2.25rem, 5.5vw, 4.25rem);
     font-weight: 800;
     letter-spacing: -2px;
     line-height: 1.05;
     color: var(--text-primary);
     margin-bottom: 12px;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .hero-title span.accent-text {
@@ -49,7 +51,7 @@
 }
 
 .hero-subtitle {
-    font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+    font-size: clamp(1.1rem, 2.2vw, 1.45rem);
     font-weight: 600;
     color: var(--text-secondary);
     display: flex;
@@ -74,7 +76,7 @@
 }
 
 .hero-desc {
-    font-size: 1.05rem;
+    font-size: clamp(0.95rem, 1.8vw, 1.05rem);
     color: var(--text-muted);
     line-height: 1.7;
     max-width: 560px;
@@ -92,7 +94,8 @@
 .hero-socials {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .hero-socials-label {
@@ -141,6 +144,7 @@
     box-shadow: var(--shadow-xl);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 .code-window:hover {
@@ -206,10 +210,13 @@
     line-height: 1.85;
     color: var(--text-secondary);
     background-color: #fafbfc;
+    overflow-x: auto;
 }
 
 .code-line {
     display: flex;
+    flex-wrap: wrap;
+    word-break: break-word;
 }
 
 .code-indent {
@@ -242,6 +249,8 @@
     align-items: center;
     justify-content: space-between;
     font-size: 0.82rem;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .preview-tag {
@@ -456,6 +465,7 @@
     gap: 12px;
     padding-top: 18px;
     border-top: 1px solid var(--border-light);
+    flex-wrap: wrap;
 }
 
 /* Secondary Projects Grid */
@@ -831,6 +841,7 @@
 
     .about-highlight-section {
         grid-template-columns: 1fr;
+        gap: 36px;
     }
 
     .skills-categories-grid {
@@ -840,7 +851,7 @@
 
 @media (max-width: 600px) {
     .hero-title {
-        font-size: 2.35rem;
+        font-size: clamp(2rem, 8vw, 2.45rem);
         letter-spacing: -1px;
     }
 
@@ -853,6 +864,38 @@
     .hero-actions a {
         width: 100%;
         text-align: center;
+    }
+
+    .hero-socials {
+        gap: 8px;
+    }
+
+    .hero-socials-label {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+
+    .code-window .window-body {
+        padding: 16px 14px;
+        font-size: clamp(0.74rem, 3.2vw, 0.82rem);
+        line-height: 1.65;
+    }
+
+    .code-window .code-indent {
+        padding-left: 12px;
+    }
+
+    .code-window .syn-highlight {
+        margin: 4px -14px;
+        padding: 2px 14px 2px 11px;
+    }
+
+    .code-window .window-footer-preview {
+        padding: 10px 12px;
+    }
+
+    .code-window .window-header {
+        padding: 0 12px;
     }
 
     .metrics-grid {
@@ -869,14 +912,60 @@
     }
 
     .primary-card-content {
-        padding: 24px 20px;
+        padding: 24px 18px;
+    }
+
+    .primary-card-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .primary-card-links a {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .primary-card-img-wrapper {
+        min-height: 220px;
+    }
+
+    .secondary-card-img-wrapper {
+        height: 190px;
+    }
+
+    .secondary-card-content {
+        padding: 20px 18px 18px;
+    }
+
+    .secondary-card-links {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .about-highlight-text div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-highlight-text a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .achievement-card {
+        padding: 20px 18px;
     }
 
     .cta-card {
-        padding: 40px 20px;
+        padding: clamp(30px, 6vw, 40px) 18px;
     }
 
     .skills-categories-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skill-category-card {
+        padding: 18px 16px;
     }
 }
