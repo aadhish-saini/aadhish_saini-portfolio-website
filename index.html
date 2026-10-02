@@ -25,6 +25,25 @@
 
 <body>
 
+    <!-- Initial Loading Experience -->
+    <div id="portfolio-loader" class="portfolio-loader" aria-hidden="true">
+        <div class="loader-inner">
+            <div class="loader-logo">
+                <span class="loader-tag">&lt;</span>
+                <span class="loader-monogram">AS</span>
+                <span class="loader-tag">/&gt;</span>
+            </div>
+            <div class="loader-info">
+                <div class="loader-name">AADHISH SAINI</div>
+                <div class="loader-role">SOFTWARE DEVELOPER</div>
+            </div>
+            <div class="loader-progress-wrap">
+                <div class="loader-progress-bar" id="loader-progress-bar"></div>
+            </div>
+            <div class="loader-status" id="loader-status">INITIALIZING PORTFOLIO...</div>
+        </div>
+    </div>
+
     <!-- Subtle Background Pattern -->
     <div class="bg-grid-pattern" aria-hidden="true"></div>
 
@@ -51,6 +70,12 @@
             </ul>
 
             <div class="nav-right">
+                <button class="cmd-trigger-btn" id="cmd-trigger-btn" aria-label="Search and command palette (Ctrl + K)" title="Press Ctrl+K to search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Search</span>
+                    <kbd class="cmd-trigger-kbd">Ctrl K</kbd>
+                </button>
+
                 <a href="files/Aadhish_resume.pdf" class="resume-btn magnetic" target="_blank" rel="noopener noreferrer">
                     Resume
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -89,7 +114,10 @@
         </div>
 
         <div class="mobile-nav-footer">
-            <a href="files/Aadhish_resume.pdf" class="primary-btn" style="width: 100%;" target="_blank">
+            <button class="secondary-btn cmd-trigger-btn" style="width: 100%; margin-bottom: 10px; justify-content: center;">
+                <i class="fa-solid fa-magnifying-glass"></i> Command Palette
+            </button>
+            <a href="files/Aadhish_resume.pdf" class="primary-btn" style="width: 100%;" target="_blank" rel="noopener noreferrer">
                 <i class="fa-solid fa-file-pdf"></i> View Resume
             </a>
         </div>
@@ -119,17 +147,17 @@
                 </div>
 
                 <p class="hero-desc reveal delay-2">
-                    Computer Science undergraduate focused on building practical, user-focused digital products and exploring modern web technologies, AI and interactive experiences.
+                    I build software that solves real problems. Computer Science undergraduate exploring practical full-stack web platforms, interactive 3D digital twins with Three.js, and applied AI systems.
                 </p>
 
                 <div class="hero-actions reveal delay-3">
                     <a href="projects.html" class="primary-btn magnetic">
                         <i class="fa-solid fa-folder-open"></i>
-                        View Projects
+                        View My Work <i class="fa-solid fa-arrow-right"></i>
                     </a>
                     <a href="contact.html" class="secondary-btn magnetic">
                         <i class="fa-regular fa-paper-plane"></i>
-                        Contact Me
+                        Let's Connect
                     </a>
                 </div>
 
@@ -188,7 +216,7 @@
                             <span class="syn-prop">hackathonRank:</span>&nbsp;<span class="syn-string">"Top 7 of 63 Teams"</span>,
                         </div>
                         <div class="code-line code-indent">
-                            <span class="syn-prop">learningContinously:</span>&nbsp;<span class="syn-bool">true</span>
+                            <span class="syn-prop">currentlyBuilding:</span>&nbsp;<span class="syn-string">"BharatManak"</span>
                         </div>
                         <div class="code-line">
                             };
@@ -216,11 +244,21 @@
             <div class="metrics-grid">
                 <div class="metric-item">
                     <div class="metric-icon">
-                        <i class="fa-solid fa-layer-group"></i>
+                        <i class="fa-solid fa-graduation-cap"></i>
                     </div>
                     <div class="metric-text">
-                        <h4>3+ Domains</h4>
-                        <p>Web, AI/ML & 3D Twins</p>
+                        <h4>B.Tech CSE</h4>
+                        <p>Computer Science Student</p>
+                    </div>
+                </div>
+
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="metric-text">
+                        <h4>Rank 7 / 63</h4>
+                        <p>Internal College Hackathon</p>
                     </div>
                 </div>
 
@@ -236,22 +274,42 @@
 
                 <div class="metric-item">
                     <div class="metric-icon">
-                        <i class="fa-solid fa-trophy"></i>
+                        <i class="fa-solid fa-layer-group"></i>
                     </div>
                     <div class="metric-text">
-                        <h4>Rank 7 / 63</h4>
-                        <p>College Hackathon Winner</p>
+                        <h4>3+ Domains</h4>
+                        <p>Web, AI/ML & 3D Twins</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CURRENTLY BUILDING -->
+        <section class="currently-building-section reveal">
+            <div class="currently-building-card">
+                <div class="currently-building-left">
+                    <div class="currently-building-icon">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <div class="currently-building-details">
+                        <span class="section-eyebrow" style="margin-bottom: 4px; font-size: 0.75rem;"><i class="fa-solid fa-bolt"></i> Currently Building</span>
+                        <h4>
+                            BharatManak
+                            <span class="badge badge-green" style="font-size: 0.7rem; padding: 2px 8px;">● In Development</span>
+                        </h4>
+                        <p>AI-powered Indian Standards Recommendation Engine for Procurement & Technical Compliance</p>
                     </div>
                 </div>
 
-                <div class="metric-item">
-                    <div class="metric-icon">
-                        <i class="fa-solid fa-graduation-cap"></i>
+                <div class="currently-building-meta">
+                    <div class="primary-tech-stack" style="margin-bottom: 0;">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">AI/ML</span>
                     </div>
-                    <div class="metric-text">
-                        <h4>B.Tech CSE</h4>
-                        <p>Computer Science Student</p>
-                    </div>
+                    <a href="projects.html" class="outline-btn" style="padding: 7px 14px; font-size: 0.82rem;">
+                        View Project <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -274,14 +332,14 @@
                 <div class="primary-card-img-wrapper">
                     <img src="images/DhruvNetra.png" alt="DhruvNetra Antarctic Digital Twin Platform Screenshot" loading="lazy">
                     <div class="primary-card-badge-overlay">
-                        <span class="badge badge-blue"><i class="fa-solid fa-star"></i> Primary Featured Project</span>
+                        <span class="badge badge-blue"><i class="fa-solid fa-snowflake"></i> Primary Featured Project</span>
                     </div>
                 </div>
 
                 <div class="primary-card-content">
                     <div>
                         <div class="primary-card-header">
-                            <p class="primary-card-category">Antarctic Digital Twin & Remote Operations</p>
+                            <p class="primary-card-category">Antarctic Digital Twin & Remote Operations Platform</p>
                             <h3 class="primary-card-title">DhruvNetra</h3>
                         </div>
 
@@ -289,35 +347,35 @@
                             An offline-first digital twin and remote operations platform for Antarctic research stations, enabling real-time monitoring, 3D visualization, AI-based anomaly detection, predictive insights, and secure remote decision-making even with limited connectivity.
                         </p>
 
-                        <div class="primary-highlights">
-                            <div class="highlight-item">
-                                <i class="fa-solid fa-circle-check"></i>
-                                <span>Offline-first resilience with local synchronization</span>
+                        <!-- What I Worked On / Contributions -->
+                        <div class="contribution-block">
+                            <div class="contribution-title">
+                                <i class="fa-solid fa-code-commit"></i> What I Worked On
                             </div>
-                            <div class="highlight-item">
-                                <i class="fa-solid fa-circle-check"></i>
-                                <span>Interactive 3D research station spatial visualization</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fa-solid fa-circle-check"></i>
-                                <span>AI anomaly detection for environmental & station telemetry</span>
+                            <div class="contribution-list">
+                                <div class="contribution-item"><span class="num">01</span> 3D Digital Twin (Three.js)</div>
+                                <div class="contribution-item"><span class="num">02</span> Frontend Architecture</div>
+                                <div class="contribution-item"><span class="num">03</span> UI Implementation</div>
+                                <div class="contribution-item"><span class="num">04</span> Telemetry Visualization</div>
+                                <div class="contribution-item"><span class="num">05</span> System Integration</div>
+                                <div class="contribution-item"><span class="num">06</span> Interactive Interfaces</div>
                             </div>
                         </div>
 
                         <div class="primary-tech-stack">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Tailwind CSS</span>
                             <span class="tech-tag">Three.js</span>
+                            <span class="tech-tag">Tailwind CSS</span>
                         </div>
                     </div>
 
                     <div class="primary-card-links">
-                        <a href="projects.html" class="primary-btn" style="padding: 9px 18px; font-size: 0.88rem;">
-                            <i class="fa-solid fa-circle-info"></i> Project Details
+                        <a href="projects.html" class="primary-btn" style="padding: 10px 20px; font-size: 0.9rem;">
+                            Explore Project <i class="fa-solid fa-arrow-right"></i>
                         </a>
                         <a href="https://github.com/aadhish-saini" class="outline-btn" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-github"></i> GitHub
+                            <i class="fa-brands fa-github"></i> GitHub Code
                         </a>
                     </div>
                 </div>
@@ -345,7 +403,7 @@
                         </div>
                         <div class="secondary-card-links">
                             <a href="projects.html">
-                                <span>View Details</span>
+                                <span>Explore Project</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
                             <a href="https://github.com/aadhish-saini" target="_blank" rel="noopener noreferrer" aria-label="Source code on GitHub">
@@ -367,14 +425,14 @@
                             An AI-powered platform that recommends relevant Indian Standards based on procurement specifications, simplifying standards identification and compliance.
                         </p>
                         <div class="secondary-tech-stack">
-                            <span class="tech-tag">AI/ML</span>
                             <span class="tech-tag">React</span>
-                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI/ML</span>
                             <span class="tech-tag">Procurement Data</span>
                         </div>
                         <div class="secondary-card-links">
                             <a href="projects.html">
-                                <span>View Details</span>
+                                <span>Explore Project</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
                             <a href="https://github.com/aadhish-saini" target="_blank" rel="noopener noreferrer" aria-label="Source code on GitHub">
@@ -384,6 +442,43 @@
                     </div>
                 </article>
 
+            </div>
+        </section>
+
+        <!-- HOW I BUILD SECTION -->
+        <section class="how-i-build-section">
+            <div class="section-header-row reveal">
+                <div>
+                    <span class="section-eyebrow"><i class="fa-solid fa-compass"></i> Engineering Process</span>
+                    <h2 class="section-title">How I Build Software.</h2>
+                    <p class="section-subtitle">A structured, practical workflow for turning ideas and problem statements into reliable, production-ready software.</p>
+                </div>
+            </div>
+
+            <div class="how-i-build-grid">
+                <div class="build-step-card reveal delay-1">
+                    <span class="build-step-num">01 / STEP</span>
+                    <h3 class="build-step-title">Understand</h3>
+                    <p class="build-step-desc">Understand the actual problem, constraints, and end-user workflows before writing a single line of code.</p>
+                </div>
+
+                <div class="build-step-card reveal delay-2">
+                    <span class="build-step-num">02 / STEP</span>
+                    <h3 class="build-step-title">Design</h3>
+                    <p class="build-step-desc">Plan the interface structure, component hierarchies, state architecture, and database relationships.</p>
+                </div>
+
+                <div class="build-step-card reveal delay-3">
+                    <span class="build-step-num">03 / STEP</span>
+                    <h3 class="build-step-title">Build</h3>
+                    <p class="build-step-desc">Turn specifications into clean, responsive software using modern web standards, Three.js, and reliable APIs.</p>
+                </div>
+
+                <div class="build-step-card reveal delay-4">
+                    <span class="build-step-num">04 / STEP</span>
+                    <h3 class="build-step-title">Iterate</h3>
+                    <p class="build-step-desc">Test edge cases, profile performance, refine micro-interactions, and continuously debug and improve.</p>
+                </div>
             </div>
         </section>
 
@@ -415,13 +510,13 @@
                         <i class="fa-solid fa-trophy"></i>
                     </div>
                     <div class="achievement-title-area">
-                        <h4>Internal College Hackathon Winner</h4>
-                        <p>Competitive Coding & Innovation</p>
+                        <h4>Internal College Hackathon</h4>
+                        <p>Competitive Problem Solving</p>
                     </div>
                 </div>
 
                 <div class="achievement-badge">
-                    <i class="fa-solid fa-award"></i> Secured Rank 7 among 63 teams
+                    <i class="fa-solid fa-award"></i> Secured Rank 7 / 63 Teams
                 </div>
 
                 <p class="achievement-desc">
@@ -436,7 +531,7 @@
                 <div>
                     <span class="section-eyebrow"><i class="fa-solid fa-cubes"></i> Core Toolbox</span>
                     <h2 class="section-title">Technologies I Work With.</h2>
-                    <p class="section-subtitle">A straightforward overview of the programming languages, frontend tools, and databases I actively use in my projects.</p>
+                    <p class="section-subtitle">Programming languages, frontend tools, and databases connected directly to real project implementations.</p>
                 </div>
                 <a href="skills.html" class="outline-btn">
                     Explore All Skills <i class="fa-solid fa-arrow-right"></i>
@@ -451,11 +546,11 @@
                         <h4 class="category-title">Languages</h4>
                     </div>
                     <div class="category-chips">
-                        <span class="tech-tag">C++</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag" title="Used in DSA & Problem Solving">C++</span>
+                        <span class="tech-tag" title="Used in VoiceShield & AI">Python</span>
+                        <span class="tech-tag" title="Used in DhruvNetra & Web Apps">JavaScript</span>
+                        <span class="tech-tag" title="Used in Web Structure">HTML5</span>
+                        <span class="tech-tag" title="Used in UI Styling">CSS3</span>
                     </div>
                 </div>
 
@@ -466,10 +561,10 @@
                         <h4 class="category-title">Frontend</h4>
                     </div>
                     <div class="category-chips">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Tailwind CSS</span>
-                        <span class="tech-tag">HTML5 / CSS3</span>
-                        <span class="tech-tag">Responsive UI</span>
+                        <span class="tech-tag" title="Used in DhruvNetra & BharatManak">React</span>
+                        <span class="tech-tag" title="Used in DhruvNetra UI">Tailwind CSS</span>
+                        <span class="tech-tag" title="Used across all projects">Responsive UI</span>
+                        <span class="tech-tag" title="Component State & Lifecycle">State Management</span>
                     </div>
                 </div>
 
@@ -480,9 +575,9 @@
                         <h4 class="category-title">Database</h4>
                     </div>
                     <div class="category-chips">
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Schema Design</span>
-                        <span class="tech-tag">Relational Data</span>
+                        <span class="tech-tag" title="Used in Library Management System">MySQL</span>
+                        <span class="tech-tag" title="Relational Data Architecture">Schema Design</span>
+                        <span class="tech-tag" title="Data Integrity & CRUD">SQL Queries</span>
                     </div>
                 </div>
 
@@ -493,11 +588,33 @@
                         <h4 class="category-title">Other & Tools</h4>
                     </div>
                     <div class="category-chips">
-                        <span class="tech-tag">Three.js</span>
-                        <span class="tech-tag">Git</span>
-                        <span class="tech-tag">GitHub</span>
-                        <span class="tech-tag">VS Code</span>
+                        <span class="tech-tag" title="Used in DhruvNetra 3D Twin">Three.js</span>
+                        <span class="tech-tag" title="Version Control">Git</span>
+                        <span class="tech-tag" title="Open Source Repositories">GitHub</span>
+                        <span class="tech-tag" title="Development Environment">VS Code</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GITHUB / OPEN SOURCE SPOTLIGHT -->
+        <section class="github-section reveal">
+            <div class="github-spotlight-card">
+                <div class="github-spotlight-content">
+                    <span class="github-spotlight-eyebrow"><i class="fa-brands fa-github"></i> GitHub & Open Source</span>
+                    <h2 class="github-spotlight-title">Explore my projects, experiments and code.</h2>
+                    <p class="github-spotlight-desc">All major software projects, proof-of-concepts, and full-stack tools are maintained on GitHub with clear documentation, structured codebases, and verified implementations.</p>
+                    <div class="github-spotlight-repos">
+                        <span class="github-repo-chip"><i class="fa-solid fa-code-fork"></i> DhruvNetra</span>
+                        <span class="github-repo-chip"><i class="fa-solid fa-code-fork"></i> VoiceShield</span>
+                        <span class="github-repo-chip"><i class="fa-solid fa-code-fork"></i> BharatManak</span>
+                        <span class="github-repo-chip"><i class="fa-solid fa-code-fork"></i> Library-Management-System</span>
+                    </div>
+                </div>
+                <div class="github-spotlight-action">
+                    <a href="https://github.com/aadhish-saini" class="primary-btn magnetic" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i> Visit GitHub <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -506,13 +623,13 @@
         <section class="cta-banner-section reveal">
             <div class="cta-card">
                 <span class="section-eyebrow"><i class="fa-regular fa-paper-plane"></i> Get In Touch</span>
-                <h2>Let's build something useful.</h2>
+                <h2>Have an idea worth building?</h2>
                 <p>
                     I'm always interested in building practical projects, learning new technologies, and collaborating on interesting ideas. Feel free to reach out.
                 </p>
                 <div class="cta-buttons">
                     <a href="contact.html" class="primary-btn magnetic">
-                        <i class="fa-solid fa-envelope"></i> Send a Message
+                        <i class="fa-solid fa-envelope"></i> Send a Message <i class="fa-solid fa-arrow-right"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/aadhish-saini-797036405/" class="secondary-btn magnetic" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn

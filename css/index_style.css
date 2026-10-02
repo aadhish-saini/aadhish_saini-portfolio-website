@@ -422,6 +422,11 @@
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.5px;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s ease;
+}
+
+.primary-project-card:hover .primary-card-title {
+    transform: translateX(4px);
 }
 
 .primary-card-desc {
@@ -483,7 +488,7 @@
     box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .secondary-project-card:hover {
@@ -504,7 +509,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .secondary-project-card:hover .secondary-card-img-wrapper img {
@@ -533,6 +538,12 @@
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 10px;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s ease;
+}
+
+.secondary-project-card:hover .secondary-card-title {
+    transform: translateX(4px);
+    color: var(--accent-hover);
 }
 
 .secondary-card-desc {
@@ -739,61 +750,7 @@
     gap: 8px;
 }
 
-/* ==========================================================================
-   CALL TO ACTION / CONTACT PREVIEW
-   ========================================================================== */
 
-.cta-banner-section {
-    max-width: var(--container-width);
-    width: 90%;
-    margin: 90px auto 40px;
-}
-
-.cta-card {
-    background: linear-gradient(135deg, #ffffff, #f8fafc);
-    border: 1px solid var(--border-strong);
-    border-radius: var(--radius-2xl);
-    padding: 60px 45px;
-    text-align: center;
-    box-shadow: var(--shadow-lg);
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 250px;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
-}
-
-.cta-card h2 {
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
-    font-weight: 800;
-    color: var(--text-primary);
-    letter-spacing: -1px;
-    margin-bottom: 14px;
-}
-
-.cta-card p {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    max-width: 580px;
-    margin: 0 auto 30px;
-    line-height: 1.7;
-}
-
-.cta-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
-}
 
 /* ==========================================================================
    MEDIA QUERIES - HOMEPAGE

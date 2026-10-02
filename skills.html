@@ -50,6 +50,12 @@
             </ul>
 
             <div class="nav-right">
+                <button class="cmd-trigger-btn" id="cmd-trigger-btn" aria-label="Search and command palette (Ctrl + K)" title="Press Ctrl+K to search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Search</span>
+                    <kbd class="cmd-trigger-kbd">Ctrl K</kbd>
+                </button>
+
                 <a href="files/Aadhish_resume.pdf" class="resume-btn magnetic" target="_blank" rel="noopener noreferrer">
                     Resume
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -88,7 +94,10 @@
         </div>
 
         <div class="mobile-nav-footer">
-            <a href="files/Aadhish_resume.pdf" class="primary-btn" style="width: 100%;" target="_blank">
+            <button class="secondary-btn cmd-trigger-btn" style="width: 100%; margin-bottom: 10px; justify-content: center;">
+                <i class="fa-solid fa-magnifying-glass"></i> Command Palette
+            </button>
+            <a href="files/Aadhish_resume.pdf" class="primary-btn" style="width: 100%;" target="_blank" rel="noopener noreferrer">
                 <i class="fa-solid fa-file-pdf"></i> View Resume
             </a>
         </div>
@@ -105,7 +114,7 @@
                     Skills & <span>Toolbox.</span>
                 </h1>
                 <p class="page-hero-desc reveal delay-2">
-                    A clean, verified overview of the programming languages, frontend libraries, databases, and development tools I use across my projects.
+                    A clean, verified overview of the programming languages, frontend libraries, databases, and development tools I use across real project implementations.
                 </p>
             </div>
         </section>
@@ -123,28 +132,28 @@
                 </div>
 
                 <div class="skills-cards-grid">
-                    <!-- C++ -->
+                    <!-- JavaScript -->
                     <div class="skill-item-card reveal delay-1">
                         <div>
                             <div class="skill-card-top">
                                 <div class="skill-card-identity">
-                                    <div class="skill-card-icon cpp">
-                                        <i class="fa-solid fa-code"></i>
+                                    <div class="skill-card-icon js">
+                                        <i class="fa-brands fa-js"></i>
                                     </div>
                                     <div>
-                                        <h3 class="skill-card-name">C++</h3>
-                                        <span class="fact-label">Core Logic</span>
+                                        <h3 class="skill-card-name">JavaScript</h3>
+                                        <span class="fact-label">Used in: DhruvNetra, Library System, Portfolio</span>
                                     </div>
                                 </div>
-                                <span class="skill-card-level-badge">Language</span>
+                                <span class="skill-card-level-badge">ES6+</span>
                             </div>
                             <p class="skill-card-desc">
-                                Algorithms, Object-Oriented Programming (OOP), Data Structures, and computational problem solving.
+                                <strong>For:</strong> UI interactions, asynchronous API calls, DOM manipulation, and interactive application logic.
                             </p>
                         </div>
                         <div class="skill-card-footer">
-                            <span><i class="fa-solid fa-check"></i> Problem Solving</span>
-                            <span>STL / DSA</span>
+                            <span><i class="fa-solid fa-check"></i> Interactive UI</span>
+                            <span>Async / APIs</span>
                         </div>
                     </div>
 
@@ -158,13 +167,13 @@
                                     </div>
                                     <div>
                                         <h3 class="skill-card-name">Python</h3>
-                                        <span class="fact-label">AI & Scripting</span>
+                                        <span class="fact-label">Used in: VoiceShield, Data Scripts</span>
                                     </div>
                                 </div>
-                                <span class="skill-card-level-badge">Language</span>
+                                <span class="skill-card-level-badge">AI & Scripting</span>
                             </div>
                             <p class="skill-card-desc">
-                                Applied AI/ML workflows, audio processing, automation scripts, and backend data manipulation.
+                                <strong>For:</strong> Applied AI/ML workflows, audio feature extraction, classification logic, and data processing.
                             </p>
                         </div>
                         <div class="skill-card-footer">
@@ -173,32 +182,32 @@
                         </div>
                     </div>
 
-                    <!-- JavaScript -->
+                    <!-- C++ -->
                     <div class="skill-item-card reveal delay-3">
                         <div>
                             <div class="skill-card-top">
                                 <div class="skill-card-identity">
-                                    <div class="skill-card-icon js">
-                                        <i class="fa-brands fa-js"></i>
+                                    <div class="skill-card-icon cpp">
+                                        <i class="fa-solid fa-code"></i>
                                     </div>
                                     <div>
-                                        <h3 class="skill-card-name">JavaScript</h3>
-                                        <span class="fact-label">Web Logic</span>
+                                        <h3 class="skill-card-name">C++</h3>
+                                        <span class="fact-label">Used in: DSA & Problem Solving</span>
                                     </div>
                                 </div>
-                                <span class="skill-card-level-badge">ES6+</span>
+                                <span class="skill-card-level-badge">Core Logic</span>
                             </div>
                             <p class="skill-card-desc">
-                                Modern ES6+, asynchronous programming (async/await), DOM manipulation, and interactive application logic.
+                                <strong>For:</strong> Object-Oriented Programming (OOP), Data Structures & Algorithms, and computational problem solving.
                             </p>
                         </div>
                         <div class="skill-card-footer">
-                            <span><i class="fa-solid fa-check"></i> Interactive UI</span>
-                            <span>Async / APIs</span>
+                            <span><i class="fa-solid fa-check"></i> Problem Solving</span>
+                            <span>STL / DSA</span>
                         </div>
                     </div>
 
-                    <!-- HTML -->
+                    <!-- HTML5 -->
                     <div class="skill-item-card reveal delay-1">
                         <div>
                             <div class="skill-card-top">
@@ -207,14 +216,14 @@
                                         <i class="fa-brands fa-html5"></i>
                                     </div>
                                     <div>
-                                        <h3 class="skill-card-name">HTML</h3>
-                                        <span class="fact-label">Markup</span>
+                                        <h3 class="skill-card-name">HTML5</h3>
+                                        <span class="fact-label">Used in: All Web Applications</span>
                                     </div>
                                 </div>
-                                <span class="skill-card-level-badge">HTML5</span>
+                                <span class="skill-card-level-badge">Markup</span>
                             </div>
                             <p class="skill-card-desc">
-                                Semantic document structures, web accessibility standards (ARIA), SEO best practices, and clean markup hierarchy.
+                                <strong>For:</strong> Semantic document structure, accessibility standards (ARIA), SEO hierarchy, and clean DOM trees.
                             </p>
                         </div>
                         <div class="skill-card-footer">
@@ -223,7 +232,7 @@
                         </div>
                     </div>
 
-                    <!-- CSS -->
+                    <!-- CSS3 -->
                     <div class="skill-item-card reveal delay-2">
                         <div>
                             <div class="skill-card-top">
@@ -232,14 +241,14 @@
                                         <i class="fa-brands fa-css3-alt"></i>
                                     </div>
                                     <div>
-                                        <h3 class="skill-card-name">CSS</h3>
-                                        <span class="fact-label">Styling & UI</span>
+                                        <h3 class="skill-card-name">CSS3</h3>
+                                        <span class="fact-label">Used in: Portfolio & Custom UI</span>
                                     </div>
                                 </div>
-                                <span class="skill-card-level-badge">CSS3</span>
+                                <span class="skill-card-level-badge">Styling</span>
                             </div>
                             <p class="skill-card-desc">
-                                Responsive design, CSS Grid & Flexbox, CSS Custom Properties, smooth micro-animations, and clean layout systems.
+                                <strong>For:</strong> Responsive layouts with Flexbox & Grid, CSS custom properties, micro-animations, and clean aesthetics.
                             </p>
                         </div>
                         <div class="skill-card-footer">
@@ -256,7 +265,7 @@
                     <div class="skill-section-icon">
                         <i class="fa-solid fa-desktop"></i>
                     </div>
-                    <h2 class="skill-section-title">Frontend Technologies</h2>
+                    <h2 class="skill-section-title">Frontend Frameworks & Libraries</h2>
                 </div>
 
                 <div class="skills-cards-grid">
@@ -270,13 +279,13 @@
                                     </div>
                                     <div>
                                         <h3 class="skill-card-name">React</h3>
-                                        <span class="fact-label">Frontend Framework</span>
+                                        <span class="fact-label">Used in: DhruvNetra, BharatManak</span>
                                     </div>
                                 </div>
                                 <span class="skill-card-level-badge">Framework</span>
                             </div>
                             <p class="skill-card-desc">
-                                Component architecture, custom hooks, reactive state management, lifecycle management, and single-page apps.
+                                <strong>For:</strong> Component architecture, state hooks, reactive interfaces, telemetry rendering, and responsive single-page apps.
                             </p>
                         </div>
                         <div class="skill-card-footer">
@@ -285,8 +294,33 @@
                         </div>
                     </div>
 
-                    <!-- Tailwind CSS -->
+                    <!-- Three.js -->
                     <div class="skill-item-card reveal delay-2">
+                        <div>
+                            <div class="skill-card-top">
+                                <div class="skill-card-identity">
+                                    <div class="skill-card-icon threejs">
+                                        <i class="fa-solid fa-cube"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="skill-card-name">Three.js</h3>
+                                        <span class="fact-label">Used in: DhruvNetra 3D Twin</span>
+                                    </div>
+                                </div>
+                                <span class="skill-card-level-badge">3D WebGL</span>
+                            </div>
+                            <p class="skill-card-desc">
+                                <strong>For:</strong> 3D research station scenes, interactive spatial visualization, camera controls, and mesh telemetry rendering.
+                            </p>
+                        </div>
+                        <div class="skill-card-footer">
+                            <span><i class="fa-solid fa-check"></i> Antarctic Digital Twin</span>
+                            <span>Spatial Web</span>
+                        </div>
+                    </div>
+
+                    <!-- Tailwind CSS -->
+                    <div class="skill-item-card reveal delay-3">
                         <div>
                             <div class="skill-card-top">
                                 <div class="skill-card-identity">
@@ -295,13 +329,13 @@
                                     </div>
                                     <div>
                                         <h3 class="skill-card-name">Tailwind CSS</h3>
-                                        <span class="fact-label">Utility Styling</span>
+                                        <span class="fact-label">Used in: DhruvNetra Platform</span>
                                     </div>
                                 </div>
                                 <span class="skill-card-level-badge">Utility CSS</span>
                             </div>
                             <p class="skill-card-desc">
-                                Rapid, consistent UI engineering with design tokens, responsive modifiers, and clean component utility styling.
+                                <strong>For:</strong> Rapid, consistent UI engineering with design tokens, responsive modifiers, and clean component layout styling.
                             </p>
                         </div>
                         <div class="skill-card-footer">
@@ -318,7 +352,7 @@
                     <div class="skill-section-icon">
                         <i class="fa-solid fa-database"></i>
                     </div>
-                    <h2 class="skill-section-title">Database & Data Management</h2>
+                    <h2 class="skill-section-title">Database & Backend Data</h2>
                 </div>
 
                 <div class="skills-cards-grid">
@@ -332,13 +366,13 @@
                                     </div>
                                     <div>
                                         <h3 class="skill-card-name">MySQL</h3>
-                                        <span class="fact-label">Relational Database</span>
+                                        <span class="fact-label">Used in: Library Management System</span>
                                     </div>
                                 </div>
                                 <span class="skill-card-level-badge">RDBMS</span>
                             </div>
                             <p class="skill-card-desc">
-                                Relational schema architecture, normalization, SQL queries, table relationships, and database transactions.
+                                <strong>For:</strong> Relational schema architecture, normalization, SQL queries, table relationships, and database transactions.
                             </p>
                         </div>
                         <div class="skill-card-footer">
@@ -355,37 +389,12 @@
                     <div class="skill-section-icon">
                         <i class="fa-solid fa-toolbox"></i>
                     </div>
-                    <h2 class="skill-section-title">Other Tools & Libraries</h2>
+                    <h2 class="skill-section-title">Tools & Version Control</h2>
                 </div>
 
                 <div class="skills-cards-grid">
-                    <!-- Three.js -->
-                    <div class="skill-item-card reveal delay-1">
-                        <div>
-                            <div class="skill-card-top">
-                                <div class="skill-card-identity">
-                                    <div class="skill-card-icon threejs">
-                                        <i class="fa-solid fa-cube"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="skill-card-name">Three.js</h3>
-                                        <span class="fact-label">3D Web Graphics</span>
-                                    </div>
-                                </div>
-                                <span class="skill-card-level-badge">WebGL / 3D</span>
-                            </div>
-                            <p class="skill-card-desc">
-                                3D scene creation, camera controls, mesh rendering, lighting, and spatial visualization for digital twin applications.
-                            </p>
-                        </div>
-                        <div class="skill-card-footer">
-                            <span><i class="fa-solid fa-check"></i> DhruvNetra 3D Twin</span>
-                            <span>Spatial Web</span>
-                        </div>
-                    </div>
-
                     <!-- Git -->
-                    <div class="skill-item-card reveal delay-2">
+                    <div class="skill-item-card reveal delay-1">
                         <div>
                             <div class="skill-card-top">
                                 <div class="skill-card-identity">
@@ -394,13 +403,13 @@
                                     </div>
                                     <div>
                                         <h3 class="skill-card-name">Git</h3>
-                                        <span class="fact-label">Version Control</span>
+                                        <span class="fact-label">Used across: All Repositories</span>
                                     </div>
                                 </div>
                                 <span class="skill-card-level-badge">VCS</span>
                             </div>
                             <p class="skill-card-desc">
-                                Branch management, commit hygiene, merge strategies, conflict resolution, and collaborative workflow.
+                                <strong>For:</strong> Branch management, commit hygiene, merge strategies, conflict resolution, and collaborative workflows.
                             </p>
                         </div>
                         <div class="skill-card-footer">
@@ -410,7 +419,7 @@
                     </div>
 
                     <!-- GitHub -->
-                    <div class="skill-item-card reveal delay-3">
+                    <div class="skill-item-card reveal delay-2">
                         <div>
                             <div class="skill-card-top">
                                 <div class="skill-card-identity">
@@ -419,13 +428,13 @@
                                     </div>
                                     <div>
                                         <h3 class="skill-card-name">GitHub</h3>
-                                        <span class="fact-label">Collaboration & Hosting</span>
+                                        <span class="fact-label">Used across: All Projects</span>
                                     </div>
                                 </div>
                                 <span class="skill-card-level-badge">Platform</span>
                             </div>
                             <p class="skill-card-desc">
-                                Remote repository hosting, open-source project management, documentation with Markdown, and project deployment.
+                                <strong>For:</strong> Remote repository hosting, open-source project documentation with Markdown, and project deployment.
                             </p>
                         </div>
                         <div class="skill-card-footer">
@@ -438,6 +447,43 @@
 
         </section>
 
+        <!-- HOW I BUILD SECTION -->
+        <section class="how-i-build-section">
+            <div class="section-header-row reveal">
+                <div>
+                    <span class="section-eyebrow"><i class="fa-solid fa-compass"></i> Engineering Process</span>
+                    <h2 class="section-title">How I Build Software.</h2>
+                    <p class="section-subtitle">Applying these technical tools with a disciplined, step-by-step workflow.</p>
+                </div>
+            </div>
+
+            <div class="how-i-build-grid">
+                <div class="build-step-card reveal delay-1">
+                    <span class="build-step-num">01 / PROCESS</span>
+                    <h3 class="build-step-title">Understand</h3>
+                    <p class="build-step-desc">Understand the actual problem, constraints, and end-user workflows before writing a single line of code.</p>
+                </div>
+
+                <div class="build-step-card reveal delay-2">
+                    <span class="build-step-num">02 / PROCESS</span>
+                    <h3 class="build-step-title">Design</h3>
+                    <p class="build-step-desc">Plan the interface structure, component hierarchies, state architecture, and database relationships.</p>
+                </div>
+
+                <div class="build-step-card reveal delay-3">
+                    <span class="build-step-num">03 / PROCESS</span>
+                    <h3 class="build-step-title">Build</h3>
+                    <p class="build-step-desc">Turn specifications into clean, responsive software using modern web standards, Three.js, and reliable APIs.</p>
+                </div>
+
+                <div class="build-step-card reveal delay-4">
+                    <span class="build-step-num">04 / PROCESS</span>
+                    <h3 class="build-step-title">Iterate</h3>
+                    <p class="build-step-desc">Test edge cases, profile performance, refine micro-interactions, and continuously debug and improve.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA SECTION -->
         <section class="cta-banner-section reveal">
             <div class="cta-card">
@@ -448,7 +494,7 @@
                 </p>
                 <div class="cta-buttons">
                     <a href="projects.html" class="primary-btn magnetic">
-                        <i class="fa-solid fa-layer-group"></i> Explore Projects
+                        <i class="fa-solid fa-layer-group"></i> Explore Projects <i class="fa-solid fa-arrow-right"></i>
                     </a>
                     <a href="contact.html" class="secondary-btn magnetic">
                         <i class="fa-regular fa-paper-plane"></i> Contact Me

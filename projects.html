@@ -50,6 +50,12 @@
             </ul>
 
             <div class="nav-right">
+                <button class="cmd-trigger-btn" id="cmd-trigger-btn" aria-label="Search and command palette (Ctrl + K)" title="Press Ctrl+K to search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Search</span>
+                    <kbd class="cmd-trigger-kbd">Ctrl K</kbd>
+                </button>
+
                 <a href="files/Aadhish_resume.pdf" class="resume-btn magnetic" target="_blank" rel="noopener noreferrer">
                     Resume
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -88,7 +94,10 @@
         </div>
 
         <div class="mobile-nav-footer">
-            <a href="files/Aadhish_resume.pdf" class="primary-btn" style="width: 100%;" target="_blank">
+            <button class="secondary-btn cmd-trigger-btn" style="width: 100%; margin-bottom: 10px; justify-content: center;">
+                <i class="fa-solid fa-magnifying-glass"></i> Command Palette
+            </button>
+            <a href="files/Aadhish_resume.pdf" class="primary-btn" style="width: 100%;" target="_blank" rel="noopener noreferrer">
                 <i class="fa-solid fa-file-pdf"></i> View Resume
             </a>
         </div>
@@ -110,6 +119,34 @@
             </div>
         </section>
 
+        <!-- CURRENTLY BUILDING -->
+        <section class="currently-building-section reveal" style="margin-top: 50px; margin-bottom: 50px;">
+            <div class="currently-building-card">
+                <div class="currently-building-left">
+                    <div class="currently-building-icon">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <div class="currently-building-details">
+                        <span class="section-eyebrow" style="margin-bottom: 4px; font-size: 0.75rem;"><i class="fa-solid fa-bolt"></i> Currently Building</span>
+                        <h4>
+                            BharatManak
+                            <span class="badge badge-green" style="font-size: 0.7rem; padding: 2px 8px;">● In Development</span>
+                        </h4>
+                        <p>AI-powered Indian Standards Recommendation Engine for Procurement Specifications</p>
+                    </div>
+                </div>
+
+                <div class="currently-building-meta">
+                    <div class="primary-tech-stack" style="margin-bottom: 0;">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">AI/ML</span>
+                    </div>
+                    <span class="badge badge-blue">Active Project</span>
+                </div>
+            </div>
+        </section>
+
         <!-- PROJECTS CONTAINER -->
         <section class="projects-container">
 
@@ -119,7 +156,7 @@
                     <i class="fa-solid fa-star" style="color: #f59e0b;"></i>
                     <span>Primary Featured Project</span>
                 </div>
-                <span class="projects-group-count">Major Project</span>
+                <span class="projects-group-count">Major Platform</span>
             </div>
 
             <!-- PROJECT 1: DhruvNetra (FEATURED) -->
@@ -138,6 +175,21 @@
                         <p class="featured-desc">
                             An offline-first digital twin and remote operations platform for Antarctic research stations, enabling real-time monitoring, 3D visualization, AI-based anomaly detection, predictive insights, and secure remote decision-making even with limited connectivity.
                         </p>
+
+                        <!-- My Contribution Section -->
+                        <div class="contribution-block">
+                            <div class="contribution-title">
+                                <i class="fa-solid fa-code-commit"></i> My Contribution
+                            </div>
+                            <div class="contribution-list">
+                                <div class="contribution-item"><span class="num">01</span> 3D Digital Twin (Three.js)</div>
+                                <div class="contribution-item"><span class="num">02</span> Frontend Architecture</div>
+                                <div class="contribution-item"><span class="num">03</span> UI Implementation</div>
+                                <div class="contribution-item"><span class="num">04</span> Telemetry Visualization</div>
+                                <div class="contribution-item"><span class="num">05</span> System Integration</div>
+                                <div class="contribution-item"><span class="num">06</span> Interactive Interfaces</div>
+                            </div>
+                        </div>
 
                         <div class="featured-feature-list">
                             <div class="feature-list-item">
@@ -167,7 +219,7 @@
                     <div class="featured-actions">
                         <a href="https://github.com/aadhish-saini" class="primary-btn magnetic" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-github"></i>
-                            View on GitHub
+                            View on GitHub <i class="fa-solid fa-arrow-right"></i>
                         </a>
                         <a href="contact.html" class="outline-btn">
                             <i class="fa-solid fa-message"></i>
@@ -206,6 +258,18 @@
                             A web-based AI voice detection platform that analyzes audio characteristics to identify AI-generated and human speech with a clear, easy-to-understand result.
                         </p>
 
+                        <div class="contribution-block" style="margin-top: 0; margin-bottom: 16px;">
+                            <div class="contribution-title">
+                                <i class="fa-solid fa-code-commit"></i> Key Implementation
+                            </div>
+                            <div class="contribution-list">
+                                <div class="contribution-item"><span class="num">01</span> Audio Feature Extraction</div>
+                                <div class="contribution-item"><span class="num">02</span> Python AI Classifier</div>
+                                <div class="contribution-item"><span class="num">03</span> Web Audio Integration</div>
+                                <div class="contribution-item"><span class="num">04</span> Result Visualizer UI</div>
+                            </div>
+                        </div>
+
                         <div class="project-card-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">AI/ML</span>
@@ -215,10 +279,10 @@
 
                         <div class="project-card-footer">
                             <a href="https://github.com/aadhish-saini" class="primary-btn" style="padding: 8px 16px; font-size: 0.85rem;" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i> Code Repository
+                                <i class="fa-brands fa-github"></i> Code Repository <i class="fa-solid fa-arrow-right"></i>
                             </a>
                             <a href="contact.html" class="outline-btn" style="padding: 6px 12px; font-size: 0.82rem;">
-                                Details <i class="fa-solid fa-arrow-right"></i>
+                                Inquire <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -242,19 +306,31 @@
                             An AI-powered platform that recommends relevant Indian Standards based on procurement specifications, simplifying standards identification and compliance.
                         </p>
 
+                        <div class="contribution-block" style="margin-top: 0; margin-bottom: 16px;">
+                            <div class="contribution-title">
+                                <i class="fa-solid fa-code-commit"></i> Key Implementation
+                            </div>
+                            <div class="contribution-list">
+                                <div class="contribution-item"><span class="num">01</span> Standards Recommendation Engine</div>
+                                <div class="contribution-item"><span class="num">02</span> Specification Text Processing</div>
+                                <div class="contribution-item"><span class="num">03</span> Responsive React Interface</div>
+                                <div class="contribution-item"><span class="num">04</span> Compliance Search Logic</div>
+                            </div>
+                        </div>
+
                         <div class="project-card-tech">
                             <span class="tech-tag">AI/ML</span>
                             <span class="tech-tag">React</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Indian Standards Data</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Indian Standards</span>
                         </div>
 
                         <div class="project-card-footer">
                             <a href="https://github.com/aadhish-saini" class="primary-btn" style="padding: 8px 16px; font-size: 0.85rem;" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i> Code Repository
+                                <i class="fa-brands fa-github"></i> Code Repository <i class="fa-solid fa-arrow-right"></i>
                             </a>
                             <a href="contact.html" class="outline-btn" style="padding: 6px 12px; font-size: 0.82rem;">
-                                Details <i class="fa-solid fa-arrow-right"></i>
+                                Inquire <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -292,7 +368,7 @@
                         </div>
                         <div class="noteworthy-links">
                             <a href="https://github.com/aadhish-saini/Library-Management-System.git" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i> GitHub Code
+                                <i class="fa-brands fa-github"></i> GitHub Code <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
                     </div>
@@ -317,7 +393,7 @@
                         </div>
                         <div class="noteworthy-links">
                             <a href="https://github.com/aadhish-saini/aadhish_saini-portfolio-website.git" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github"></i> GitHub Code
+                                <i class="fa-brands fa-github"></i> GitHub Code <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                             <a href="index.html">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site
@@ -330,6 +406,28 @@
 
         </section>
 
+        <!-- GITHUB / OPEN SOURCE SPOTLIGHT -->
+        <section class="github-section reveal">
+            <div class="github-spotlight-card">
+                <div class="github-spotlight-content">
+                    <span class="github-spotlight-eyebrow"><i class="fa-brands fa-github"></i> Open Source Repositories</span>
+                    <h2 class="github-spotlight-title">Explore my projects, experiments and code.</h2>
+                    <p class="github-spotlight-desc">All code repositories, frontend modules, and experimental projects are hosted with clean commits and documentation on GitHub.</p>
+                    <div class="github-spotlight-repos">
+                        <span class="github-repo-chip"><i class="fa-solid fa-code-fork"></i> DhruvNetra</span>
+                        <span class="github-repo-chip"><i class="fa-solid fa-code-fork"></i> VoiceShield</span>
+                        <span class="github-repo-chip"><i class="fa-solid fa-code-fork"></i> BharatManak</span>
+                        <span class="github-repo-chip"><i class="fa-solid fa-code-fork"></i> Library-Management</span>
+                    </div>
+                </div>
+                <div class="github-spotlight-action">
+                    <a href="https://github.com/aadhish-saini" class="primary-btn magnetic" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i> Visit GitHub <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA BANNER -->
         <section class="cta-banner-section reveal">
             <div class="cta-card">
@@ -340,7 +438,7 @@
                 </p>
                 <div class="cta-buttons">
                     <a href="contact.html" class="primary-btn magnetic">
-                        <i class="fa-solid fa-envelope"></i> Get In Touch
+                        <i class="fa-solid fa-envelope"></i> Get In Touch <i class="fa-solid fa-arrow-right"></i>
                     </a>
                     <a href="https://github.com/aadhish-saini" class="secondary-btn magnetic" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-github"></i> Explore GitHub

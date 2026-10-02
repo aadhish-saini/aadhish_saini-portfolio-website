@@ -50,6 +50,12 @@
             </ul>
 
             <div class="nav-right">
+                <button class="cmd-trigger-btn" id="cmd-trigger-btn" aria-label="Search and command palette (Ctrl + K)" title="Press Ctrl+K to search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Search</span>
+                    <kbd class="cmd-trigger-kbd">Ctrl K</kbd>
+                </button>
+
                 <a href="files/Aadhish_resume.pdf" class="resume-btn magnetic" target="_blank" rel="noopener noreferrer">
                     Resume
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -88,7 +94,10 @@
         </div>
 
         <div class="mobile-nav-footer">
-            <a href="files/Aadhish_resume.pdf" class="primary-btn" style="width: 100%;" target="_blank">
+            <button class="secondary-btn cmd-trigger-btn" style="width: 100%; margin-bottom: 10px; justify-content: center;">
+                <i class="fa-solid fa-magnifying-glass"></i> Command Palette
+            </button>
+            <a href="files/Aadhish_resume.pdf" class="primary-btn" style="width: 100%;" target="_blank" rel="noopener noreferrer">
                 <i class="fa-solid fa-file-pdf"></i> View Resume
             </a>
         </div>
@@ -134,7 +143,7 @@
 
                 <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="projects.html" class="primary-btn magnetic">
-                        <i class="fa-solid fa-layer-group"></i> See My Work
+                        <i class="fa-solid fa-layer-group"></i> See My Work <i class="fa-solid fa-arrow-right"></i>
                     </a>
                     <a href="contact.html" class="secondary-btn magnetic">
                         <i class="fa-regular fa-paper-plane"></i> Get In Touch
@@ -164,12 +173,12 @@
                             <span class="fact-val">Web Dev, AI/ML, Digital Twins</span>
                         </div>
                         <div class="fact-item">
-                            <span class="fact-label">Location</span>
-                            <span class="fact-val">India</span>
+                            <span class="fact-label">Hackathons</span>
+                            <span class="fact-val">Rank 7 / 63 Teams</span>
                         </div>
                         <div class="fact-item">
                             <span class="fact-label">Status</span>
-                            <span class="fact-val" style="color: var(--success);">Available for Roles</span>
+                            <span class="fact-val" style="color: var(--success);">Available for Opportunities</span>
                         </div>
                     </div>
                 </div>
@@ -188,7 +197,7 @@
             <div class="reveal">
                 <span class="section-eyebrow"><i class="fa-solid fa-trophy"></i> Recognition</span>
                 <h2 class="section-title">Key Achievements.</h2>
-                <p class="section-subtitle">Milestones achieved during my academic and competitive programming journey.</p>
+                <p class="section-subtitle">Factual milestones achieved during my academic and competitive programming journey.</p>
             </div>
 
             <div class="achievements-grid">
@@ -197,10 +206,10 @@
                     <div class="achievement-box-icon">
                         <i class="fa-solid fa-award"></i>
                     </div>
-                    <span class="achievement-box-badge">Internal College Hackathon Winner</span>
+                    <span class="achievement-box-badge">Internal College Hackathon</span>
                     <h3 class="achievement-box-title">Secured Rank 7 of 63 Teams</h3>
                     <p class="achievement-box-desc">
-                        Demonstrated engineering problem-solving and rapid prototype execution among 63 participating teams, building a functional, high-impact solution within rigorous hackathon constraints.
+                        Demonstrated engineering problem-solving and rapid prototype execution among 63 participating teams, building a functional, high-impact solution within rigorous competition timelines.
                     </p>
                 </div>
 
@@ -209,8 +218,8 @@
                     <div class="achievement-box-icon">
                         <i class="fa-solid fa-cube"></i>
                     </div>
-                    <span class="achievement-box-badge">System Innovation</span>
-                    <h3 class="achievement-box-title">Antarctic Digital Twin Architecture</h3>
+                    <span class="achievement-box-badge">System Architecture</span>
+                    <h3 class="achievement-box-title">Antarctic Digital Twin Platform</h3>
                     <p class="achievement-box-desc">
                         Engineered DhruvNetra — an offline-first telemetry and 3D digital twin platform addressing the unique extreme-environment constraints of Antarctic scientific stations.
                     </p>
@@ -230,28 +239,65 @@
             </div>
         </section>
 
+        <!-- HOW I BUILD SECTION -->
+        <section class="how-i-build-section">
+            <div class="section-header-row reveal">
+                <div>
+                    <span class="section-eyebrow"><i class="fa-solid fa-compass"></i> Engineering Process</span>
+                    <h2 class="section-title">How I Build Software.</h2>
+                    <p class="section-subtitle">A simple four-step approach for transforming problems into functional, dependable software products.</p>
+                </div>
+            </div>
+
+            <div class="how-i-build-grid">
+                <div class="build-step-card reveal delay-1">
+                    <span class="build-step-num">01 / STEP</span>
+                    <h3 class="build-step-title">Understand</h3>
+                    <p class="build-step-desc">Understand the actual problem, constraints, and end-user workflows before writing a single line of code.</p>
+                </div>
+
+                <div class="build-step-card reveal delay-2">
+                    <span class="build-step-num">02 / STEP</span>
+                    <h3 class="build-step-title">Design</h3>
+                    <p class="build-step-desc">Plan the interface structure, component hierarchies, state architecture, and database relationships.</p>
+                </div>
+
+                <div class="build-step-card reveal delay-3">
+                    <span class="build-step-num">03 / STEP</span>
+                    <h3 class="build-step-title">Build</h3>
+                    <p class="build-step-desc">Turn specifications into clean, responsive software using modern web standards, Three.js, and reliable APIs.</p>
+                </div>
+
+                <div class="build-step-card reveal delay-4">
+                    <span class="build-step-num">04 / STEP</span>
+                    <h3 class="build-step-title">Iterate</h3>
+                    <p class="build-step-desc">Test edge cases, profile performance, refine micro-interactions, and continuously debug and improve.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- JOURNEY / TIMELINE SECTION -->
         <section class="journey-section" id="journey">
             <div class="reveal">
                 <span class="section-eyebrow"><i class="fa-solid fa-timeline"></i> Timeline</span>
                 <h2 class="section-title">Journey & What I've Built.</h2>
-                <p class="section-subtitle">A chronological overview of milestones, skills acquisition, and practical software projects.</p>
+                <p class="section-subtitle">A chronological overview of milestones, skills acquisition, and practical software engineering projects.</p>
             </div>
 
             <div class="timeline-wrapper">
                 <div class="timeline-line"></div>
 
-                <!-- Milestone 1 -->
+                <!-- Milestone 1: 2024 -->
                 <div class="timeline-step reveal">
                     <div class="timeline-marker"></div>
                     <div class="timeline-card">
                         <div class="timeline-meta">
-                            <span class="timeline-tag">Foundation</span>
-                            <span class="badge badge-blue">Milestone 01</span>
+                            <span class="timeline-tag">2024</span>
+                            <span class="badge badge-blue">Programming Fundamentals</span>
                         </div>
-                        <h3 class="timeline-heading">Programming Fundamentals & First Portfolio</h3>
+                        <h3 class="timeline-heading">Core Computer Science & First Web Pages</h3>
                         <p class="timeline-text">
-                            Started building a solid groundwork in computer science with C++ and Python, focusing on data structures, algorithms, and OOP. Built initial responsive web pages and developed my first portfolio from scratch with vanilla HTML and CSS.
+                            Built a strong foundation in computer science with C++ and Python, focusing on object-oriented programming, data structures, and algorithmic logic. Created initial responsive web pages and developed my first portfolio from scratch with vanilla HTML and CSS.
                         </p>
                         <div class="timeline-tech-row">
                             <span class="tech-tag">C++</span>
@@ -262,17 +308,17 @@
                     </div>
                 </div>
 
-                <!-- Milestone 2 -->
+                <!-- Milestone 2: 2025 -->
                 <div class="timeline-step reveal delay-1">
                     <div class="timeline-marker"></div>
                     <div class="timeline-card">
                         <div class="timeline-meta">
-                            <span class="timeline-tag">Expansion</span>
-                            <span class="badge badge-blue">Milestone 02</span>
+                            <span class="timeline-tag">2025</span>
+                            <span class="badge badge-blue">Web & Databases</span>
                         </div>
                         <h3 class="timeline-heading">Interactive Web Development & Database Systems</h3>
                         <p class="timeline-text">
-                            Expanded into JavaScript, DOM manipulation, asynchronous programming, and REST APIs. Built full-stack database-backed applications including a responsive Library Management System powered by MySQL and Node.js.
+                            Expanded into JavaScript ES6+, DOM manipulation, asynchronous programming, and REST APIs. Built full-stack database-backed applications including a responsive Library Management System powered by MySQL and Node.js.
                         </p>
                         <div class="timeline-tech-row">
                             <span class="tech-tag">JavaScript (ES6+)</span>
@@ -283,98 +329,49 @@
                     </div>
                 </div>
 
-                <!-- Milestone 3 -->
+                <!-- Milestone 3: 2026 -->
                 <div class="timeline-step reveal delay-2">
                     <div class="timeline-marker"></div>
                     <div class="timeline-card">
                         <div class="timeline-meta">
-                            <span class="timeline-tag">Competition</span>
-                            <span class="badge badge-green">Milestone 03</span>
+                            <span class="timeline-tag">2026</span>
+                            <span class="badge badge-green">Hackathons & Major Projects</span>
                         </div>
-                        <h3 class="timeline-heading">Hackathon Projects & Rapid Problem Solving</h3>
+                        <h3 class="timeline-heading">Hackathon Rank 7 / 63, DhruvNetra & Applied AI</h3>
                         <p class="timeline-text">
-                            Tackled practical problem statements in competitive hackathons under tight timelines. Collaborated effectively and secured <strong>Rank 7 among 63 teams</strong> in the internal college hackathon.
-                        </p>
-                        <div class="timeline-tech-row">
-                            <span class="tech-tag">Rapid Prototyping</span>
-                            <span class="tech-tag">Team Collaboration</span>
-                            <span class="tech-tag">Git & GitHub</span>
-                            <span class="tech-tag">Product Pitching</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Milestone 4 -->
-                <div class="timeline-step latest reveal delay-3">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-card" style="border-color: var(--accent-border);">
-                        <div class="timeline-meta">
-                            <span class="timeline-tag">Major Project</span>
-                            <span class="badge badge-indigo">Milestone 04</span>
-                        </div>
-                        <h3 class="timeline-heading">DhruvNetra — Antarctic Remote Operations Platform</h3>
-                        <p class="timeline-text">
-                            Designed and engineered DhruvNetra as an offline-first digital twin and remote operations platform for Antarctic research stations. Implemented real-time monitoring, 3D visualization using Three.js, and anomaly detection algorithms for environmental sensors.
+                            Competed in the internal college hackathon securing <strong>Rank 7 among 63 teams</strong>. Engineered <strong>DhruvNetra</strong> (Antarctic 3D Digital Twin with Three.js & React), explored audio signal AI classification with <strong>VoiceShield</strong>, and developed <strong>BharatManak</strong> for procurement standards recommendation.
                         </p>
                         <div class="timeline-tech-row">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">Three.js</span>
+                            <span class="tech-tag">Python AI/ML</span>
                             <span class="tech-tag">Tailwind CSS</span>
-                            <span class="tech-tag">Offline Architecture</span>
+                            <span class="tech-tag">Offline-First</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Milestone 5 -->
-                <div class="timeline-step latest reveal delay-4">
+                <!-- Milestone 4: NOW -->
+                <div class="timeline-step latest reveal delay-3">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-card">
+                    <div class="timeline-card" style="border-color: var(--accent-border);">
                         <div class="timeline-meta">
-                            <span class="timeline-tag">Applied AI</span>
-                            <span class="badge badge-blue">Milestone 05</span>
+                            <span class="timeline-tag">NOW</span>
+                            <span class="badge badge-indigo">Building & Learning</span>
                         </div>
-                        <h3 class="timeline-heading">AI Exploration — VoiceShield & BharatManak</h3>
+                        <h3 class="timeline-heading">Continuous Exploration & Open-Source Software</h3>
                         <p class="timeline-text">
-                            Explored applied AI workflows by engineering <strong>AI Voice Detector (VoiceShield)</strong> to analyze acoustic properties for synthetic voice detection, and <strong>BharatManak</strong> to match procurement specifications against Indian Standards automatically.
+                            Actively refining production-grade architecture, learning advanced 3D spatial web capabilities, expanding full-stack engineering skills, and developing practical AI-integrated software tools. Open to developer internships, hackathons, and collaborations.
                         </p>
                         <div class="timeline-tech-row">
-                            <span class="tech-tag">Python AI/ML</span>
-                            <span class="tech-tag">Audio Processing</span>
-                            <span class="tech-tag">Procurement AI</span>
-                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Software Engineering</span>
+                            <span class="tech-tag">3D Web</span>
+                            <span class="tech-tag">Applied AI</span>
+                            <span class="tech-tag">Collaborative Development</span>
                         </div>
                     </div>
                 </div>
 
-            </div>
-        </section>
-
-        <!-- ENGINEERING APPROACH -->
-        <section class="approach-section">
-            <div class="reveal">
-                <span class="section-eyebrow"><i class="fa-solid fa-compass"></i> Focus Areas</span>
-                <h2 class="section-title">What Drives My Work.</h2>
-                <p class="section-subtitle">Principles that guide how I build software and approach technical challenges.</p>
-            </div>
-
-            <div class="approach-grid">
-                <div class="approach-card reveal delay-1">
-                    <div class="approach-icon"><i class="fa-solid fa-code"></i></div>
-                    <h4>Practical Utility</h4>
-                    <p>Focusing on software that solves real pain points, performs efficiently, and maintains high reliability under real-world conditions.</p>
-                </div>
-
-                <div class="approach-card reveal delay-2">
-                    <div class="approach-icon"><i class="fa-solid fa-brain"></i></div>
-                    <h4>Continuous Learning</h4>
-                    <p>Staying curious about modern toolchains, AI breakthroughs, and 3D web experiences by building practical proof-of-concepts.</p>
-                </div>
-
-                <div class="approach-card reveal delay-3">
-                    <div class="approach-icon"><i class="fa-solid fa-cubes"></i></div>
-                    <h4>Clean Architecture</h4>
-                    <p>Writing structured, readable, and modular code with proper separation of concerns, semantic HTML, and maintainable CSS.</p>
-                </div>
             </div>
         </section>
 
@@ -382,16 +379,19 @@
         <section class="cta-banner-section reveal">
             <div class="cta-card">
                 <span class="section-eyebrow"><i class="fa-regular fa-paper-plane"></i> Connect</span>
-                <h2>Let's build something great together.</h2>
+                <h2>Have an idea worth building?</h2>
                 <p>
                     I am actively seeking software development opportunities, internships, and collaborations where I can contribute and grow.
                 </p>
                 <div class="cta-buttons">
                     <a href="contact.html" class="primary-btn magnetic">
-                        <i class="fa-solid fa-envelope"></i> Reach Out
+                        <i class="fa-solid fa-envelope"></i> Reach Out <i class="fa-solid fa-arrow-right"></i>
                     </a>
                     <a href="skills.html" class="secondary-btn magnetic">
                         <i class="fa-solid fa-code"></i> View Skills Toolbox
+                    </a>
+                    <a href="projects.html" class="outline-btn">
+                        <i class="fa-solid fa-layer-group"></i> Explore Projects
                     </a>
                 </div>
             </div>
